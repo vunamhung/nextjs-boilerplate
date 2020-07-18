@@ -4,7 +4,15 @@ module.exports = {
     "postcss-import",
     "postcss-each",
     "tailwindcss",
-    "postcss-preset-env",
     "postcss-nested",
+    "postcss-flexbugs-fixes",
+    [
+      "postcss-preset-env",
+      {
+        autoprefixer: {
+          flexbox: "no-2009",
+        },
+      },
+    ],
   ],
 };

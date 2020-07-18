@@ -25,6 +25,7 @@
     "imagemin-svgo": "^7.0.0",
     "postcss-each": "^0.10.0",
     "postcss-easy-import": "^3.0.0",
+    "postcss-flexbugs-fixes": "^4.2.1",
     "postcss-import": "^12.0.1",
     "postcss-nested": "^4.2.3",
     "postcss-preset-env": "^6.7.0",
