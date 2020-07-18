@@ -1,0 +1,9 @@
+:root {
+    --button-padding-small: 0 var(--spacing-1);
+    --button-padding-medium: var(--spacing-1) var(--spacing-2);
+    --button-padding-large: var(--spacing-2) var(--spacing-4);
+
+    --button-fontsize-small: inherit;
+    --button-fontsize-medium: inherit;
+    --button-fontsize-large: 120%;
+}
