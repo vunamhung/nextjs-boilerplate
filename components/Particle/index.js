@@ -80,6 +80,6 @@ const params = {
   retina_detect: true,
 };
 
-export default function Particle({ ...props }) {
-  return <Particles className="particle" params={params} {...props} />;
+export default function Particle({ className }) {
+  return <Particles className={className} params={params} />;
 }
