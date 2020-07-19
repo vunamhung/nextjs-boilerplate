@@ -1,4 +1,4 @@
-import Wrapper from "@/components/Wrapper";
+import Wrapper from "@/modules/Wrapper";
 
 export default () => {
   return (
