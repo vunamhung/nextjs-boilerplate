@@ -1,13 +1,8 @@
-import Head from "next/head";
+import Wrapper from "@/components/Wrapper";
 
 export default () => {
   return (
-    <>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-        <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet" />
-      </Head>
+    <Wrapper title="Create Next App">
       <div className="container">
         <main>
           <h1 className="title">
@@ -183,6 +178,6 @@ export default () => {
           }
         }
       `}</style>
-    </>
+    </Wrapper>
   );
 };
