@@ -17,7 +17,8 @@
     "next-optimized-images": "^2.3.3",
     "prop-types": "^15.6.2",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "react-particles-js": "^3.2.1"
   },
   "devDependencies": {
     "@tailwindcss/custom-forms": "^0.2.1",
