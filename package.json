@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "export:html": "next build && next export -o dist"
+    "export:html": "next build && next export -o dist",
+    "debug": "NODE_OPTIONS='--inspect' next dev"
   },
   "dependencies": {
     "axios": "^0.19.2",
