@@ -1074,10 +1074,10 @@
   resolved "https://registry.yarnpkg.com/@types/q/-/q-1.5.4.tgz#15925414e0ad2cd765bfef58842f7e26a7accb24"
   integrity sha512-1HcDas8SEj4z1Wc696tH56G8OlRaH/sqZOynNNB+HF0WOeXPaxTtbYzJY2oEfiUxjSKjhCKr+MvR7dCHcEelug==
 
-"@vunamhung/tailwind-config@0.9.4":
-  version "0.9.4"
-  resolved "https://registry.yarnpkg.com/@vunamhung/tailwind-config/-/tailwind-config-0.9.4.tgz#f94c35bbcfe137377d9e66ba12b091ffad702ec9"
-  integrity sha512-VulVwIc0HbTmIIupNH7zVztq/HSbIwU8EL/C8q48v7reO1b6XJsXATeP/PUX4dZhxShVwpaMOkwreL2SddKgFA==
+"@vunamhung/tailwind-config@0.9.5":
+  version "0.9.5"
+  resolved "https://registry.yarnpkg.com/@vunamhung/tailwind-config/-/tailwind-config-0.9.5.tgz#dfbfc799615bb4774fcfda54a29684e642bdcbf1"
+  integrity sha512-68GfgnMjneMVDjdvtOmxw4ERdSCFolWFFFu5JQDxP+olr2Zhcw9O+fCrFQIlOw+rPxlrITqbzoa6hLoWKNYlTw==
   dependencies:
     lodash "^4.17.15"
 
