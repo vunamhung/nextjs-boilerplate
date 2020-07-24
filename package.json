@@ -18,6 +18,7 @@
     "next-fonts": "1.4.0",
     "next-optimized-images": "^2.3.3",
     "prop-types": "^15.6.2",
+    "rc-drawer": "^4.1.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-particles-js": "^3.2.1",

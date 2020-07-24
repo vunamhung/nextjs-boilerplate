@@ -3,6 +3,7 @@
     "baseUrl": ".",
     "paths": {
       "@/public/*": ["public/*"],
+      "@/contexts/*": ["contexts/*"],
       "@/components/*": ["components/*"],
       "@/lib/*": ["lib/*"],
       "@/lib": ["lib/index.js"],
