@@ -1,0 +1,19 @@
+.sticky-inner-wrapper {
+  height: 0;
+}
+
+.header {
+  &,
+  img {
+    transition: all 0.3s ease 0s;
+  }
+}
+
+.sticky-header-active .header {
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 0 20px;
+  padding: var(--spacing-4) 0;
+  img {
+    height: var(--spacing-6);
+  }
+}

@@ -20,7 +20,8 @@
     "prop-types": "^15.6.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "react-particles-js": "^3.2.1"
+    "react-particles-js": "^3.2.1",
+    "react-stickynode": "^3.0.3"
   },
   "devDependencies": {
     "@svgr/cli": "^5.4.0",

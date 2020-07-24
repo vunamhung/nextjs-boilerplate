@@ -2,7 +2,7 @@ import Wrapper from "@/modules/Wrapper";
 
 export default () => {
   return (
-    <Wrapper title="Create Next App">
+    <Wrapper title="Create Next App" hideHeader>
       <div className="container">
         <main>
           <h1 className="title">
