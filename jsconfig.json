@@ -5,9 +5,10 @@
       "@/public/*": ["public/*"],
       "@/components/*": ["components/*"],
       "@/lib/*": ["lib/*"],
+      "@/lib": ["lib/index.js"],
+      "@/icons": ["icons/index.js"],
       "@/styles/*": ["styles/*"],
-      "@/modules/*": ["modules/*"],
-      "@/icons": ["icons/index.js"]
+      "@/modules/*": ["modules/*"]
     }
   }
 }
