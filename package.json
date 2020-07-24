@@ -4,6 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "predev": "tailwindcss build styles/tailwind.css -o public/tailwind.output.css",
+    "prebuild": "export NODE_ENV=production && yarn run predev",
     "build": "next build",
     "start": "next start",
     "export:html": "next build && next export -o dist",

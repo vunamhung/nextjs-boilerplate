@@ -15,7 +15,7 @@
 # production
 /dist
 /build
-index.output.css
+tailwind.output.css
 
 # misc
 .DS_Store
