@@ -1,7 +1,8 @@
 @import "_vars/*";
 @import "variants/*";
 @import "tailwindcss/base";
+@import "base/*";
 @import "elements/*";
-@import "app/*";
+@import "object/*";
 @tailwind components;
 @tailwind utilities;
