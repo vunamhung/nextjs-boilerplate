@@ -1,5 +1,5 @@
 :root {
-    --button-line-height: var(--line-height-normal);
-    --button-transition-speed: 75ms;
-    --button-filter-brightness: 95%;
+  --button-line-height: var(--line-height-normal);
+  --button-transition-speed: 75ms;
+  --button-filter-brightness: 95%;
 }
