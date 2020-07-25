@@ -1,27 +1,23 @@
-import React, { useReducer } from 'react';
+import React, { useReducer, createContext } from "react";
 
 const initialState = {
   isOpen: false,
 };
 
 function reducer(state, action) {
-  switch (action.type) {
-    case 'TOGGLE':
-      return {
-        ...state,
-        isOpen: !state.isOpen,
-      };
-    default:
-      return state;
+  if (action.type === "TOGGLE") {
+    return { ...state, isOpen: !state.isOpen };
   }
-}
-export const DrawerContext = React.createContext({});
 
-export const DrawerProvider = ({ children }) => {
+  return state;
+}
+
+export const DrawerContext = createContext({});
+
+function DrawerProvider({ children }) {
   const [state, dispatch] = useReducer(reducer, initialState);
-  return (
-    <DrawerContext.Provider value={{ state, dispatch }}>
-      {children}
-    </DrawerContext.Provider>
-  );
-};
+
+  return <DrawerContext.Provider value={{ state, dispatch }}>{children}</DrawerContext.Provider>;
+}
+
+export default DrawerProvider;

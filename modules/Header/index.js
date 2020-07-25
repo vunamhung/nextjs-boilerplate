@@ -1,15 +1,14 @@
 import Container from "@/components/Container";
 import Sticky from "react-stickynode";
-import { DrawerProvider } from "@/contexts/DrawerContext";
+import DrawerProvider from "@/contexts/DrawerContext";
 import NavBar from "@/components/NavBar";
+import Logo from "@/components/Logo";
 
 const Header = ({ fluid }) => {
   return (
     <header className="header py-6">
       <Container fluid={fluid} className="flex justify-between items-center">
-        <a href="/">
-          <img className="h-8" src="/vercel.svg" alt="logo" />
-        </a>
+        <Logo src="/vercel.svg" name="Next" url="/" imgClass="h-8" />
         <DrawerProvider>
           <NavBar />
         </DrawerProvider>
