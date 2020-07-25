@@ -3,5 +3,6 @@
 @import "tailwindcss/base";
 @import "base/*";
 @import "elements/*";
-@import "object/*";
+@import "../components/*/index.css";
+@import "../modules/*/index.css";
 @tailwind components;
