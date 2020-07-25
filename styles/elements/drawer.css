@@ -1,0 +1,16 @@
+.drawer {
+  .scrollspy-menu {
+    overflow-x: auto;
+    padding: var(--spacing-16);
+    li {
+      margin-bottom: var(--spacing-10);
+      &.is-current a,
+      a:hover {
+        color: var(--color-success-600);
+      }
+    }
+    a {
+      font-size: var(--font-size-2xl);
+    }
+  }
+}
