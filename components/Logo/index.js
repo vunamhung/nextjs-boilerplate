@@ -1,19 +1,21 @@
 import { classNames } from "@/lib";
+import Link from "next/link";
 
 export default function Logo({ url, src, name, className, imgClass }) {
   if (url) {
     if (src) {
       return (
-        <div className={classNames("logo", className)}>
-          <a href={url}>
+        <Link href={url}>
+          <div className={classNames("logo inline-flex items-center cursor-pointer", className)}>
             <img className={imgClass} src={src} alt={name} />
-          </a>
-        </div>
+            <span className="ml-2 text-xl font-medium">{name}</span>
+          </div>
+        </Link>
       );
     }
     return (
-      <div className={classNames("logo", className)}>
-        <a href={url}>{name}</a>
+      <div className={classNames("logo cursor-pointer", className)}>
+        <Link href={url}>{name}</Link>
       </div>
     );
   } else {

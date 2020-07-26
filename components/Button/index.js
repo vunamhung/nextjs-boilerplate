@@ -1,3 +1,4 @@
+import Link from "next/link";
 import PropTypes from "prop-types";
 import { classNames } from "@/lib";
 
@@ -6,9 +7,11 @@ export default function Button({ children, className, url, tone = "primary", pri
 
   if (url) {
     return (
-      <a className={classes} href={url} {...props}>
-        {children}
-      </a>
+      <Link href={url}>
+        <button className={classes} {...props}>
+          {children}
+        </button>
+      </Link>
     );
   }
 
