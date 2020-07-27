@@ -34,15 +34,20 @@
     "@svgr/cli": "^5.4.0",
     "@tailwindcss/custom-forms": "^0.2.1",
     "@vunamhung/tailwind-config": "0.9.5",
+    "image-trace-loader": "^1.0.2",
     "imagemin-mozjpeg": "9.0.0",
     "imagemin-optipng": "8.0.0",
     "imagemin-svgo": "8.0.0",
+    "lqip-loader": "^2.2.0",
     "postcss-each": "^0.10.0",
     "postcss-easy-import": "^3.0.0",
     "postcss-flexbugs-fixes": "^4.2.1",
     "postcss-import": "^12.0.1",
     "postcss-nested": "^4.2.3",
     "postcss-preset-env": "^6.7.0",
-    "tailwindcss": "^1.5.1"
+    "responsive-loader": "^1.2.0",
+    "svg-sprite-loader": "^5.0.0",
+    "tailwindcss": "^1.5.1",
+    "webp-loader": "^0.6.0"
   }
 }
