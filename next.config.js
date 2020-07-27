@@ -1,6 +1,9 @@
 const withPlugins = require("next-compose-plugins");
 const withOptimizedImages = require("next-optimized-images");
 const withFonts = require("next-fonts");
+const withBundleAnalyzer = require("@next/bundle-analyzer")({
+  enabled: process.env.ANALYZE === "true",
+});
 
 module.exports = withPlugins([
   [
@@ -16,4 +19,5 @@ module.exports = withPlugins([
     },
   ],
   withFonts,
+  withBundleAnalyzer,
 ]);

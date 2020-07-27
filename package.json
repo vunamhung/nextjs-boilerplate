@@ -5,8 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "predev": "tailwindcss build styles/tailwind.css -o public/tailwind.output.css",
-    "prebuild": "export NODE_ENV=production && yarn run predev",
+    "prebuild": "cross-env NODE_ENV=production yarn run predev",
     "build": "next build",
+    "build:analyze": "cross-env ANALYZE=true next build",
     "start": "next start",
     "export:html": "next build && next export -o dist",
     "svgr": "svgr public/svg/ -d icons/ --icon",
@@ -31,9 +32,11 @@
     "react-stickynode": "^3.0.3"
   },
   "devDependencies": {
+    "@next/bundle-analyzer": "^9.4.4",
     "@svgr/cli": "^5.4.0",
     "@tailwindcss/custom-forms": "^0.2.1",
     "@vunamhung/tailwind-config": "0.9.5",
+    "cross-env": "^7.0.2",
     "image-trace-loader": "^1.0.2",
     "imagemin-mozjpeg": "9.0.0",
     "imagemin-optipng": "8.0.0",
