@@ -13,6 +13,7 @@
     "debug": "NODE_OPTIONS='--inspect' next dev"
   },
   "dependencies": {
+    "@glidejs/glide": "^3.4.1",
     "axios": "^0.19.2",
     "classnames": "^2.2.6",
     "next": "9.4.4",
