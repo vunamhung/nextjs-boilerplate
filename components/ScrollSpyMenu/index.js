@@ -6,7 +6,7 @@ import { classNames } from "@/lib";
 import useDrawer from "@/stores/drawer";
 
 const ScrollSpyMenu = ({ className, menuItems, drawerClose, ...props }) => {
-  const [, actions] = useDrawer();
+  const [, { toggle }] = useDrawer();
 
   // empty array for scrollspy items
   const scrollItems = [];
@@ -27,7 +27,7 @@ const ScrollSpyMenu = ({ className, menuItems, drawerClose, ...props }) => {
           ) : (
             <>
               {drawerClose ? (
-                <AnchorLink href={menu.path} offset={menu.offset} onClick={actions.toggle}>
+                <AnchorLink href={menu.path} offset={menu.offset} onClick={toggle}>
                   {menu.label}
                 </AnchorLink>
               ) : (

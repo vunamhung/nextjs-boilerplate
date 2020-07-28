@@ -22,11 +22,11 @@ const menuItems = [
 ];
 
 function NavBar() {
-  const [state, actions] = useDrawer();
+  const [{ isOpen }, { toggle }] = useDrawer();
 
   return (
     <nav>
-      <Drawer width="420px" placement="right" open={state.isOpen} drawerHandler={<HamburgMenu />} toggleHandler={actions.toggle}>
+      <Drawer width="420px" placement="right" open={isOpen} drawerHandler={<HamburgMenu />} toggleHandler={toggle}>
         <ScrollSpyMenu menuItems={menuItems} drawerClose={true} offset={-100} />
       </Drawer>
     </nav>
