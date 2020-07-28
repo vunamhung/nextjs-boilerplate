@@ -8351,6 +8351,11 @@ react-stickynode@^3.0.3:
     shallowequal "^1.0.0"
     subscribe-ui-event "^2.0.6"
 
+react-sweet-state@^2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/react-sweet-state/-/react-sweet-state-2.3.1.tgz#0effa906c324ffb781241151d85fbff62508642a"
+  integrity sha512-dqTIK/rxr4j2TzSWl3GB2XBwTJ3Ux8i+B80T/uKVrLUib1LRjfweHi8ezKzCH48KWTUs+SGc26EZjWUtv7y6aA==
+
 react@16.13.1:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react/-/react-16.13.1.tgz#2e818822f1a9743122c063d6410d85c1e3afe48e"

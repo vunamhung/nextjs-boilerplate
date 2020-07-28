@@ -1,13 +1,13 @@
-import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import Scrollspy from "react-scrollspy";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import Link from "next/link";
 import { classNames } from "@/lib";
-import { DrawerContext } from "@/contexts/DrawerContext";
+import useDrawer from "@/stores/drawer";
 
 const ScrollSpyMenu = ({ className, menuItems, drawerClose, ...props }) => {
-  const { dispatch } = useContext(DrawerContext);
+  const [, actions] = useDrawer();
+
   // empty array for scrollspy items
   const scrollItems = [];
 
@@ -15,13 +15,6 @@ const ScrollSpyMenu = ({ className, menuItems, drawerClose, ...props }) => {
   menuItems.forEach((item) => {
     scrollItems.push(item.path.slice(1));
   });
-
-  // Close drawer when click on menu item
-  const toggleDrawer = () => {
-    dispatch({
-      type: "TOGGLE",
-    });
-  };
 
   return (
     <Scrollspy items={scrollItems} className={classNames("scrollspy-menu", className)} {...props}>
@@ -34,7 +27,7 @@ const ScrollSpyMenu = ({ className, menuItems, drawerClose, ...props }) => {
           ) : (
             <>
               {drawerClose ? (
-                <AnchorLink href={menu.path} offset={menu.offset} onClick={toggleDrawer}>
+                <AnchorLink href={menu.path} offset={menu.offset} onClick={actions.toggle}>
                   {menu.label}
                 </AnchorLink>
               ) : (

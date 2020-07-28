@@ -1,5 +1,4 @@
-import React, { useContext } from "react";
-import { DrawerContext } from "@/contexts/DrawerContext";
+import useDrawer from "@/stores/drawer";
 import Drawer from "@/components/Drawer";
 import HamburgMenu from "@/components/HamburgMenu";
 import ScrollSpyMenu from "@/components/ScrollSpyMenu";
@@ -23,17 +22,11 @@ const menuItems = [
 ];
 
 function NavBar() {
-  const { state, dispatch } = useContext(DrawerContext);
-
-  const toggleHandler = () => {
-    dispatch({
-      type: "TOGGLE",
-    });
-  };
+  const [state, actions] = useDrawer();
 
   return (
     <nav>
-      <Drawer width="420px" placement="right" open={state.isOpen} drawerHandler={<HamburgMenu />} toggleHandler={toggleHandler}>
+      <Drawer width="420px" placement="right" open={state.isOpen} drawerHandler={<HamburgMenu />} toggleHandler={actions.toggle}>
         <ScrollSpyMenu menuItems={menuItems} drawerClose={true} offset={-100} />
       </Drawer>
     </nav>
