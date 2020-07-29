@@ -1,5 +1,3 @@
-function FooterSection() {
+export default function FooterSection() {
   return "";
 }
-
-export default FooterSection;

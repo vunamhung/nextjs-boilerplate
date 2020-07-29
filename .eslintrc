@@ -1,0 +1,46 @@
+{
+	"parser": "babel-eslint",
+	"parserOptions": {
+		"ecmaVersion": 7,
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"jsx": true
+		}
+	},
+  "extends": ["react-app", "plugin:jsx-a11y/recommended"],
+  "plugins": ["jsx-a11y"],
+	"globals": {
+		"document": true,
+		"wp": true,
+		"google": true,
+		"__": true,
+		"pluginName": true,
+		"pluginVersion": true,
+		"pluginApiPath": true
+	},
+	"rules": {
+		"no-console": [1, { "allow": ["warn", "error"] }],
+		"no-new-object": 1,
+		"no-array-constructor": 1,
+		"no-new-func": 1,
+		"no-var": 1,
+		"object-shorthand": 1,
+		"no-prototype-builtins": 1,
+		"no-eval": 1,
+		"prefer-spread": 1,
+		"no-param-reassign": 1,
+		"prefer-arrow-callback": 1,
+		"no-confusing-arrow": 1,
+		"no-useless-constructor": 1,
+		"no-dupe-class-members": 1,
+		"prefer-const": 1,
+		"no-multi-assign": 1,
+		"no-plusplus": 1,
+		"eqeqeq": 1,
+		"no-unneeded-ternary": 1,
+		"nonblock-statement-body-position": 1,
+		"no-else-return": 1,
+		"no-loop-func": 1,
+		"react/react-in-jsx-scope": 0
+	}
+}

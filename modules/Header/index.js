@@ -14,7 +14,7 @@ const Header = ({ fluid }) => {
   );
 };
 
-function HeaderSection({ sticky, fluid }) {
+export default function HeaderSection({ sticky, fluid }) {
   if (sticky) {
     return (
       <Sticky top={0} innerZ={9999} activeClass="sticky-header-active">
@@ -25,5 +25,3 @@ function HeaderSection({ sticky, fluid }) {
 
   return <Header fluid={fluid} />;
 }
-
-export default HeaderSection;
