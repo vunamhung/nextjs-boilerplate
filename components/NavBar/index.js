@@ -21,7 +21,7 @@ const menuItems = [
   },
 ];
 
-function NavBar() {
+export default function NavBar() {
   const [{ isOpen }, { toggle }] = useDrawer();
 
   return (
@@ -32,5 +32,3 @@ function NavBar() {
     </nav>
   );
 }
-
-export default NavBar;

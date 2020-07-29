@@ -1,6 +1,6 @@
 import { classNames } from "@/lib";
 
-const HamburgMenu = ({ className, wrapperStyle, barColor = "var(--color-primary-500)", width = "44px", height = "30px", ...props }) => {
+export default function HamburgMenu({ className, wrapperStyle, barColor, width, height, ...props }) {
   return (
     <button className={classNames("hamburg-menu", className)} aria-label="hamburgMenu" {...props}>
       <span />
@@ -17,6 +17,10 @@ const HamburgMenu = ({ className, wrapperStyle, barColor = "var(--color-primary-
       `}</style>
     </button>
   );
-};
+}
 
-export default HamburgMenu;
+HamburgMenu.defaultProps = {
+  barColor: "var(--color-primary-500)",
+  width: "44px",
+  height: "30px",
+};

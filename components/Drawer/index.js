@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import RcDrawer from "rc-drawer";
 
-const Drawer = ({ className, children, closeButton, closeButtonStyle, drawerHandler, toggleHandler, open, ...props }) => {
+export default function Drawer({ className, children, closeButton, closeButtonStyle, drawerHandler, toggleHandler, open, ...props }) {
   return (
     <>
       <RcDrawer open={open} onClose={toggleHandler} className={className} {...props}>
@@ -12,7 +12,7 @@ const Drawer = ({ className, children, closeButton, closeButtonStyle, drawerHand
       </div>
     </>
   );
-};
+}
 
 Drawer.propTypes = {
   className: PropTypes.string,
@@ -27,5 +27,3 @@ Drawer.defaultProps = {
   handler: false,
   level: null,
 };
-
-export default Drawer;

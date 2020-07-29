@@ -5,7 +5,7 @@ import Link from "next/link";
 import { classNames } from "@/lib";
 import useDrawer from "@/stores/drawer";
 
-const ScrollSpyMenu = ({ className, menuItems, drawerClose, ...props }) => {
+export default function ScrollSpyMenu({ className, menuItems, drawerClose, ...props }) {
   const [, { toggle }] = useDrawer();
 
   // empty array for scrollspy items
@@ -41,7 +41,7 @@ const ScrollSpyMenu = ({ className, menuItems, drawerClose, ...props }) => {
       ))}
     </Scrollspy>
   );
-};
+}
 
 ScrollSpyMenu.propTypes = {
   className: PropTypes.string,
@@ -59,5 +59,3 @@ ScrollSpyMenu.defaultProps = {
   componentTag: "ul",
   currentClassName: "is-current",
 };
-
-export default ScrollSpyMenu;
