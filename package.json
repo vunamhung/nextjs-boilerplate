@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@glidejs/glide": "^3.4.1",
+    "ahooks": "^2.3.0",
     "axios": "^0.19.2",
     "classnames": "^2.2.6",
     "gsap": "^3.4.2",
