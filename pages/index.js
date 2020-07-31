@@ -1,6 +1,6 @@
 import Wrapper from "@/modules/Wrapper";
 
-export default () => {
+export default function Home() {
   return (
     <Wrapper title="Create Next App">
       <div className="container">
@@ -180,4 +180,4 @@ export default () => {
       `}</style>
     </Wrapper>
   );
-};
+}
