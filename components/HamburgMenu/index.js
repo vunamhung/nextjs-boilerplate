@@ -1,4 +1,4 @@
-import { classNames } from "@/lib";
+import classNames from "classnames";
 
 export default function HamburgMenu({ className, wrapperStyle, barColor, width, height, ...props }) {
   return (

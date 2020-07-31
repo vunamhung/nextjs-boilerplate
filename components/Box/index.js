@@ -1,5 +1,5 @@
-import Container from "@/components/Container";
-import { classNames } from "@/lib";
+import Container from "../Container";
+import classNames from "classnames";
 
 export default function Box({ children, title, subTitle, className, ...props }) {
   return (

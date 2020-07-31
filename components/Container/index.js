@@ -1,4 +1,4 @@
-import { classNames } from "@/lib";
+import classNames from "classnames";
 
 export default function Container({ children, fluid, noGutter, className, ...props }) {
   return (

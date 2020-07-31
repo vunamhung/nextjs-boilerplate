@@ -1,4 +1,4 @@
-import { classNames } from "@/lib";
+import classNames from "classnames";
 import Link from "next/link";
 
 export default function Logo({ url, src, name, className, imgClass }) {

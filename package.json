@@ -71,5 +71,10 @@
     "svg-sprite-loader": "^5.0.0",
     "tailwindcss": "^1.5.1",
     "webp-loader": "^0.6.0"
+  },
+  "bit": {
+    "env": {},
+    "componentsDefaultDirectory": "components/{name}",
+    "packageManager": "yarn"
   }
 }

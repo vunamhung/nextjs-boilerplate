@@ -1,7 +1,7 @@
-import useDrawer from "@/stores/drawer";
-import Drawer from "@/components/Drawer";
-import HamburgMenu from "@/components/HamburgMenu";
-import ScrollSpyMenu from "@/components/ScrollSpyMenu";
+import useDrawer from "../../stores/drawer";
+import Drawer from "../Drawer";
+import HamburgMenu from "../HamburgMenu";
+import ScrollSpyMenu from "../ScrollSpyMenu";
 
 const menuItems = [
   {

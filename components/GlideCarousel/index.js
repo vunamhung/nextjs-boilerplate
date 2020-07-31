@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import PropTypes from "prop-types";
 import Glide from "@glidejs/glide";
-import { classNames } from "@/lib";
+import classNames from "classnames";
 
 export default function GlideCarousel({
   className,

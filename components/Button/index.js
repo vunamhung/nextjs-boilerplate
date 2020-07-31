@@ -1,6 +1,6 @@
 import Link from "next/link";
 import PropTypes from "prop-types";
-import { classNames } from "@/lib";
+import classNames from "classnames";
 
 export default function Button({ children, className, url, tone = "primary", priority, size, onClick, ...props }) {
   const classes = classNames("button", className, { [`~${tone}`]: tone, [`!${priority}`]: priority, [`!${size}`]: size });

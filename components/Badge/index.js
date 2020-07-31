@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { classNames } from "@/lib";
+import classNames from "classnames";
 
 export default function Badge({ children, className, tone = "primary", priority, pill, fontSize = "60%", ...props }) {
   return (

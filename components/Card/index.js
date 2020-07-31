@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { classNames } from "@/lib";
+import classNames from "classnames";
 
 export default function Card({ children, className, tone = "primary", rounded = "rounded-lg", priority, ...props }) {
   return (

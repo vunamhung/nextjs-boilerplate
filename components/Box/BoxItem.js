@@ -1,4 +1,4 @@
-import BoxIcon from "@/components/Box/BoxIcon";
+import BoxIcon from "./BoxIcon";
 
 export default function BoxItem({ children, title, icon, className, ...props }) {
   return (
