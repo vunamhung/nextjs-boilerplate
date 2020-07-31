@@ -20,6 +20,7 @@
     "ahooks": "^2.3.0",
     "axios": "^0.19.2",
     "classnames": "^2.2.6",
+    "countries-list": "^2.5.6",
     "gsap": "^3.4.2",
     "lazy": "^1.0.11",
     "next": "9.5.1",
