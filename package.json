@@ -34,6 +34,7 @@
     "react": "16.13.1",
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-dom": "16.13.1",
+    "react-gsap": "^2.2.1",
     "react-particles-js": "3.3.0",
     "react-reveal": "^1.2.2",
     "react-scrollspy": "^3.4.3",
