@@ -1,5 +1,16 @@
+import knex from "knex";
 import Cors from "micro-cors";
 import { ApolloServer, gql } from "apollo-server-micro";
+
+const db = knex({
+  client: "mysql",
+  connection: {
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASS,
+    database: process.env.DB_NAME,
+  },
+});
 
 const cors = Cors({
   allowMethods: ["POST", "OPTIONS"],
@@ -7,32 +18,24 @@ const cors = Cors({
 
 const typeDefs = gql`
   # This "Book" type defines the queryable fields for every book in our data source.
-  type Book {
-    title: String
-    author: String
+  type Post {
+    post_title: String
+    post_author: String
+    post_content: String
   }
 
   # The "Query" type is special: it lists all of the available queries that
   # clients can execute, along with the return type for each. In this
-  # case, the "books" query returns an array of zero or more Books (defined above).
+  # case, the "posts" query returns an array of zero or more Posts (defined above).
   type Query {
-    books: [Book]
+    posts: [Post]
   }
 `;
 
 const resolvers = {
   Query: {
-    books(parent, args, context) {
-      return [
-        {
-          title: "Harry Potter and the Chamber of Secrets",
-          author: "J.K. Rowling",
-        },
-        {
-          title: "Jurassic Park",
-          author: "Michael Crichton",
-        },
-      ];
+    posts(parent, args, { db }) {
+      return db.select("*").from("wp_posts");
     },
   },
 };
@@ -40,7 +43,7 @@ const resolvers = {
 const apolloServer = new ApolloServer({
   typeDefs,
   resolvers,
-  context: () => ({}),
+  context: () => ({ db }),
 });
 
 const handler = apolloServer.createHandler({ path: "/api" });
