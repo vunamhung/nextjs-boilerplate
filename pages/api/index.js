@@ -17,7 +17,7 @@ const cors = Cors({
 });
 
 const typeDefs = gql`
-  # This "Book" type defines the queryable fields for every book in our data source.
+  # This "Post" type defines the queryable fields for every post in our data source.
   type Post {
     post_title: String
     post_author: String
