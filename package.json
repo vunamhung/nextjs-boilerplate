@@ -13,6 +13,21 @@
     "svgr": "svgr public/svg/ -d icons/ --icon",
     "debug": "NODE_OPTIONS='--inspect' next dev"
   },
+  "postcss": {
+    "plugins": {
+      "postcss-easy-import": {},
+      "postcss-import": {},
+      "postcss-each": {},
+      "tailwindcss": {},
+      "postcss-nested": {},
+      "postcss-flexbugs-fixes": {},
+      "postcss-preset-env": {
+        "autoprefixer": {
+          "flexbox": "no-2009"
+        }
+      }
+    }
+  },
   "dependencies": {
     "@glidejs/glide": "^3.4.1",
     "@rehooks/local-storage": "^2.4.0",
@@ -46,7 +61,8 @@
     "react-spring": "^8.0.27",
     "react-stickynode": "^3.0.3",
     "react-sweet-state": "^2.3.1",
-    "react-use-gesture": "^7.0.15"
+    "react-use-gesture": "^7.0.15",
+    "styled-jsx-plugin-postcss": "^2.0.1"
   },
   "devDependencies": {
     "@next/bundle-analyzer": "9.5.1",

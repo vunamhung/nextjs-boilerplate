@@ -75,16 +75,14 @@ export default function Home() {
           display: flex;
           justify-content: center;
           align-items: center;
-        }
-
-        footer img {
-          margin-left: 0.5rem;
-        }
-
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
+          a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          img {
+            margin-left: 0.5rem;
+          }
         }
 
         a {
