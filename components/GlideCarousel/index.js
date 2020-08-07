@@ -26,34 +26,31 @@ export default function GlideCarousel({
     totalBullets.push(i);
   }
 
-  const Controls = (
-    <div className="glide__controls flex" data-glide-el="controls">
-      <div className="glide__prev--area" data-glide-dir="<">
-        {prevButton ? prevButton : <button>Prev</button>}
-      </div>
-      <div className="glide__next--area" data-glide-dir=">">
-        {nextButton ? nextButton : <button>Next</button>}
-      </div>
-    </div>
-  );
-
-  const Bullets = (
-    <div className="glide__bullets" data-glide-el="controls[nav]">
-      <>
-        {totalBullets.map((index) => (
-          <div key={index} className="glide__bullet" data-glide-dir={`=${index}`} />
-        ))}
-      </>
-    </div>
-  );
-
   return (
     <div className={classNames("glide", className)} id={carouselSelector ?? "glide"}>
       <div className="glide__track" data-glide-el="track">
         <ul className="glide__slides">{children}</ul>
       </div>
-      {controls && <Controls />}
-      {bullets && <Bullets />}
+      {controls && (
+        <div className="glide__controls flex" data-glide-el="controls">
+          <div className="glide__prev--area" data-glide-dir="<">
+            {prevButton ? prevButton : <button>Prev</button>}
+          </div>
+          <div className="glide__next--area" data-glide-dir=">">
+            {nextButton ? nextButton : <button>Next</button>}
+          </div>
+        </div>
+      )}
+
+      {bullets && (
+        <div className="glide__bullets" data-glide-el="controls[nav]">
+          <>
+            {totalBullets.map((index) => (
+              <div key={index} className="glide__bullet" data-glide-dir={`=${index}`} />
+            ))}
+          </>
+        </div>
+      )}
     </div>
   );
 }
