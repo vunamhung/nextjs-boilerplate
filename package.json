@@ -10,7 +10,7 @@
     "build:analyze": "cross-env ANALYZE=true next build",
     "start": "next start",
     "export:html": "next build && next export -o dist",
-    "svgr": "svgr public/svg/ -d icons/ --icon",
+    "svgr": "svgr images/svg/ -d icons/ --icon",
     "debug": "NODE_OPTIONS='--inspect' next dev"
   },
   "postcss": {
