@@ -1,5 +1,5 @@
+import Headroom from "react-headroom";
 import Container from "@/components/Container";
-import Sticky from "react-stickynode";
 import NavBar from "@/components/NavBar";
 import Logo from "@/components/Logo";
 
@@ -17,9 +17,9 @@ const Header = ({ fluid }) => {
 export default function HeaderSection({ sticky, fluid }) {
   if (sticky) {
     return (
-      <Sticky top={0} innerZ={9999} activeClass="sticky-header-active">
+      <Headroom>
         <Header fluid={fluid} />
-      </Sticky>
+      </Headroom>
     );
   }
 

@@ -57,11 +57,11 @@
     "react-countup": "^4.3.3",
     "react-dom": "16.13.1",
     "react-gsap": "^2.2.1",
+    "react-headroom": "^3.0.0",
     "react-particles-js": "3.3.0",
     "react-reveal": "^1.2.2",
     "react-scrollspy": "^3.4.3",
     "react-spring": "^8.0.27",
-    "react-stickynode": "^3.0.3",
     "react-sweet-state": "^2.3.1",
     "react-use-gesture": "^7.0.15",
     "styled-jsx-plugin-postcss": "^2.0.1"

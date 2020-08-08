@@ -8,11 +8,11 @@ export default function Logo({ url, src, name, className, imgClass }) {
         <Link href={url}>
           <div className={classNames("logo inline-flex items-center cursor-pointer", className)}>
             <img className={imgClass} src={src} alt={name} />
-            <span className="ml-2 text-xl font-medium">{name}</span>
           </div>
         </Link>
       );
     }
+
     return (
       <div className={classNames("logo cursor-pointer", className)}>
         <Link href={url}>{name}</Link>
@@ -26,6 +26,7 @@ export default function Logo({ url, src, name, className, imgClass }) {
         </div>
       );
     }
+
     return <div className={classNames("logo", className)}>{name}</div>;
   }
 }
