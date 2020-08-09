@@ -5,12 +5,13 @@ import ReactMarkdown from "react-markdown/with-html";
 import Wrapper from "@/modules/Wrapper";
 import Container from "@/components/Container";
 
-export default function Post({ content, title }) {
+export default function Post({ content, title, date }) {
   return (
     <Wrapper title={title}>
       <Container>
         <article>
           <h1>{title}</h1>
+          <span>{date}</span>
           <ReactMarkdown escapeHtml={false} source={content} />
         </article>
       </Container>

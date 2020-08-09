@@ -8,14 +8,15 @@ export default function Home({ posts }) {
   return (
     <Wrapper title="Create Next App">
       <Container>
-        {posts.map(({ title, description, slug }) => (
+        {posts.map(({ title, description, date, slug }) => (
           <article className="mb-6" key={title}>
             <header>
-              <h3 className="cursor-pointer">
+              <h3>
                 <Link href="/post/[slug]" as={`/post/${slug}`}>
-                  {title}
+                  <a>{title}</a>
                 </Link>
               </h3>
+              <span className="text-sm text-neutral-600">{date}</span>
             </header>
             <section>
               <p>{description}</p>
