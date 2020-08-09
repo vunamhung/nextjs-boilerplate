@@ -1,8 +1,7 @@
-import { readdirSync, readFileSync } from "fs";
 import Link from "next/link";
-import matter from "gray-matter";
 import Wrapper from "@/modules/Wrapper";
 import Container from "@/components/Container";
+import { getPosts } from "@/lib/posts";
 
 export default function Home({ posts }) {
   return (
@@ -29,22 +28,9 @@ export default function Home({ posts }) {
 }
 
 export async function getStaticProps() {
-  const files = readdirSync(`${process.cwd()}/content/posts`);
-
-  const posts = files.map((filename) => {
-    const markdownWithMetadata = readFileSync(`content/posts/${filename}`).toString();
-
-    const { data } = matter(markdownWithMetadata);
-
-    return {
-      slug: filename.replace(".md", ""),
-      ...data,
-    };
-  });
-
   return {
     props: {
-      posts,
+      posts: getPosts(),
     },
   };
 }

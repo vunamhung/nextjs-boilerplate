@@ -1,11 +1,10 @@
-import { readdirSync, readFileSync } from "fs";
-import path from "path";
-import matter from "gray-matter";
+import Link from "next/link";
 import ReactMarkdown from "react-markdown/with-html";
 import Wrapper from "@/modules/Wrapper";
 import Container from "@/components/Container";
+import { getPostBySlug, getPostsSlugs } from "@/lib/posts";
 
-export default function Post({ content, title, date }) {
+export default function Post({ content, title, date, nextPost, previousPost }) {
   return (
     <Wrapper title={title}>
       <Container>
@@ -14,35 +13,40 @@ export default function Post({ content, title, date }) {
           <span>{date}</span>
           <ReactMarkdown escapeHtml={false} source={content} />
         </article>
+        <nav className="flex justify-between">
+          {previousPost && (
+            <Link href={"/post/[slug]"} as={`/post/${previousPost.slug}`}>
+              <a className="text-lg font-bold">← {previousPost.title}</a>
+            </Link>
+          )}
+          {nextPost && (
+            <Link href={"/post/[slug]"} as={`/post/${nextPost.slug}`}>
+              <a className="text-lg font-bold">{nextPost.title} →</a>
+            </Link>
+          )}
+        </nav>
       </Container>
     </Wrapper>
   );
 }
 
 export async function getStaticPaths() {
-  const files = readdirSync("content/posts");
-
-  const paths = files.map((filename) => ({
-    params: {
-      slug: filename.replace(".md", ""),
-    },
-  }));
-
   return {
-    paths,
+    paths: getPostsSlugs(),
     fallback: false,
   };
 }
 
 export async function getStaticProps({ params: { slug } }) {
-  const markdownWithMetadata = readFileSync(path.join("content/posts", `${slug}.md`)).toString();
+  const postData = getPostBySlug(slug);
 
-  const { data, content } = matter(markdownWithMetadata);
+  if (!postData.previousPost) {
+    postData.previousPost = null;
+  }
 
-  return {
-    props: {
-      content,
-      ...data,
-    },
-  };
+  if (!postData.nextPost) {
+    postData.nextPost = null;
+  }
+
+  return { props: postData };
 }
