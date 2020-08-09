@@ -10,7 +10,7 @@ export default function Post({ content, title, date, nextPost, previousPost }) {
       <Container>
         <article>
           <h1>{title}</h1>
-          <span className="text-sm text-neutral-600">{date}</span>
+          <span className="text-sm text-neutral-600">{date} ago</span>
           <ReactMarkdown escapeHtml={false} source={content} />
         </article>
         <nav className="flex justify-between py-10">
