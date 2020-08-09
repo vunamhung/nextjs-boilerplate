@@ -1,13 +1,13 @@
 import Link from "next/link";
 import Wrapper from "@/modules/Wrapper";
 import Container from "@/components/Container";
-import { getPosts } from "@/lib/posts";
+import { getSortedPosts } from "@/lib/posts";
 
 export default function Home({ posts }) {
   return (
     <Wrapper title="Create Next App">
       <Container>
-        {posts.map(({ title, description, date, slug }) => (
+        {posts.map(({ title, description, dateRelative, slug }) => (
           <article className="mb-6" key={title}>
             <header>
               <h3>
@@ -15,7 +15,7 @@ export default function Home({ posts }) {
                   <a>{title}</a>
                 </Link>
               </h3>
-              <span className="text-sm text-neutral-600">{date} ago</span>
+              <span className="text-sm text-neutral-600">{dateRelative} ago</span>
             </header>
             <section>
               <p>{description}</p>
@@ -30,7 +30,7 @@ export default function Home({ posts }) {
 export async function getStaticProps() {
   return {
     props: {
-      posts: getPosts(),
+      posts: getSortedPosts(),
     },
   };
 }

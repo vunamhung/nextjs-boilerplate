@@ -4,13 +4,13 @@ import Wrapper from "@/modules/Wrapper";
 import Container from "@/components/Container";
 import { getPostBySlug, getPostsSlugs } from "@/lib/posts";
 
-export default function Post({ content, title, date, nextPost, previousPost }) {
+export default function Post({ content, title, dateRelative, nextPost, previousPost }) {
   return (
     <Wrapper title={title}>
       <Container>
         <article>
           <h1>{title}</h1>
-          <span className="text-sm text-neutral-600">{date} ago</span>
+          <span className="text-sm text-neutral-600">{dateRelative} ago</span>
           <ReactMarkdown escapeHtml={false} source={content} />
         </article>
         <nav className="flex justify-between py-10">
