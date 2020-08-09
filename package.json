@@ -38,6 +38,7 @@
     "axios": "^0.19.2",
     "classnames": "^2.2.6",
     "countries-list": "^2.5.6",
+    "date-fns": "^2.15.0",
     "gsap": "^3.4.2",
     "knex": "^0.21.2",
     "lazy": "^1.0.11",

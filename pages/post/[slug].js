@@ -10,10 +10,10 @@ export default function Post({ content, title, date, nextPost, previousPost }) {
       <Container>
         <article>
           <h1>{title}</h1>
-          <span>{date}</span>
+          <span className="text-sm text-neutral-600">{date}</span>
           <ReactMarkdown escapeHtml={false} source={content} />
         </article>
-        <nav className="flex justify-between">
+        <nav className="flex justify-between py-10">
           {previousPost && (
             <Link href={"/post/[slug]"} as={`/post/${previousPost.slug}`}>
               <a className="text-lg font-bold">← {previousPost.title}</a>
@@ -39,14 +39,6 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params: { slug } }) {
   const postData = getPostBySlug(slug);
-
-  if (!postData.previousPost) {
-    postData.previousPost = null;
-  }
-
-  if (!postData.nextPost) {
-    postData.nextPost = null;
-  }
 
   return { props: postData };
 }
