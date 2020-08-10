@@ -1,11 +1,13 @@
 import Link from "next/link";
+import { NextSeo } from "next-seo";
 import Wrapper from "@/modules/Wrapper";
 import Container from "@/components/Container";
 import { getSortedPosts } from "@/lib/posts";
 
 export default function Home({ posts }) {
   return (
-    <Wrapper title="Create Next App">
+    <Wrapper>
+      <NextSeo title="Create Next Blog" description="A short description goes here." />
       <Container>
         {posts.map(({ title, description, dateRelative, slug }) => (
           <article className="mb-6" key={title}>

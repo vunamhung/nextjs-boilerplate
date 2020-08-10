@@ -1,12 +1,14 @@
 import Link from "next/link";
+import { NextSeo } from "next-seo";
 import ReactMarkdown from "react-markdown/with-html";
 import Wrapper from "@/modules/Wrapper";
 import Container from "@/components/Container";
 import { getPostBySlug, getPostsSlugs } from "@/lib/posts";
 
-export default function Post({ content, title, dateRelative, nextPost, previousPost }) {
+export default function Post({ content, description, title, dateRelative, nextPost, previousPost }) {
   return (
-    <Wrapper title={title}>
+    <Wrapper>
+      <NextSeo title={title} description={description} />
       <Container>
         <article>
           <h1>{title}</h1>
