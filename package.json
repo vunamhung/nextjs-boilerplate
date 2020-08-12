@@ -60,6 +60,7 @@
     "react-dom": "16.13.1",
     "react-gsap": "^2.2.1",
     "react-headroom": "^3.0.0",
+    "react-lazyload": "^3.0.0",
     "react-particles-js": "3.3.0",
     "react-reveal": "^1.2.2",
     "react-scrollspy": "^3.4.3",
