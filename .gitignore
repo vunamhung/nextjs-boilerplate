@@ -16,6 +16,8 @@
 /dist
 /build
 tailwind.output.css
+public/workbox-*.js
+public/sw.js
 
 # misc
 .DS_Store
