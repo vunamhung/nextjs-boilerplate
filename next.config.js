@@ -3,7 +3,7 @@ const withFonts = require("next-fonts");
 const withPWA = require("next-pwa")({
   pwa: {
     dest: "public",
-    disable: process.env.NODE_ENV === "production",
+    disable: process.env.NODE_ENV !== "production",
   },
 });
 const withOptimizedImages = require("next-optimized-images")({
@@ -19,4 +19,4 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
   enabled: process.env.ANALYZE === "true",
 });
 
-module.exports = withPlugins([withPWA, withOptimizedImages, withFonts, withBundleAnalyzer]);
+module.exports = withPlugins([withOptimizedImages, withFonts, withBundleAnalyzer, withPWA]);
