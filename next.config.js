@@ -30,6 +30,7 @@ module.exports = withPlugins([
       pwa: {
         dest: "public",
         disable: process.env.NODE_ENV !== "production",
+        buildExcludes: [/static\/images\/.*$/],
       },
     },
   ],
