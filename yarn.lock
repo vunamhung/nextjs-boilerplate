@@ -3971,7 +3971,7 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
-classnames@2.2.6, classnames@2.x, classnames@^2.2.5, classnames@^2.2.6:
+classnames@2.2.6, classnames@2.x, classnames@^2.2.3, classnames@^2.2.5, classnames@^2.2.6:
   version "2.2.6"
   resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.6.tgz#43935bffdd291f326dad0a205309b38d00f650ce"
   integrity sha512-JR/iSQOSt+LQIWwrwEzJ9uk0xfN3mTVYMwt1Ir5mUcSN6pU+V4zQFFaJsclJbPuAUQH+yfWef6tm7l1quW3C8Q==
@@ -4666,7 +4666,7 @@ data-uri-to-buffer@3.0.0:
   dependencies:
     buffer-from "^1.1.1"
 
-date-fns@^2.15.0:
+date-fns@^2.15.0, date-fns@^2.9.0:
   version "2.15.0"
   resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.15.0.tgz#424de6b3778e4e69d3ff27046ec136af58ae5d5f"
   integrity sha512-ZCPzAMJZn3rNUvvQIMlXhDr4A+Ar07eLeGsGREoWU19a3Pqf5oYa+ccd+B3F6XVtQY6HANMFdOQ8A+ipFnvJdQ==
@@ -6054,6 +6054,13 @@ form-data@~2.3.2:
     asynckit "^0.4.0"
     combined-stream "^1.0.6"
     mime-types "^2.1.12"
+
+formalizer@^2.1.3:
+  version "2.1.3"
+  resolved "https://registry.yarnpkg.com/formalizer/-/formalizer-2.1.3.tgz#79ea2c0685858bdc2f0d19680556b6ea31a36726"
+  integrity sha512-94GGYjcP1XZU1tOYW5OZ5an6jbrzcfE3Cn3J+/9H9J5H1Jk9uIV2+bLxs0hBVDZfGS7PrxefvAceoQ0twG9wTQ==
+  optionalDependencies:
+    validator ">=4.0.0"
 
 forwarded@~0.1.2:
   version "0.1.2"
@@ -7871,6 +7878,11 @@ lodash.once@^4.0.0:
   resolved "https://registry.yarnpkg.com/lodash.once/-/lodash.once-4.1.1.tgz#0dd3971213c7c56df880977d504c88fb471a97ac"
   integrity sha1-DdOXEhPHxW34gJd9UEyI+0cal6w=
 
+lodash.pick@^4.2.1:
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/lodash.pick/-/lodash.pick-4.4.0.tgz#52f05610fff9ded422611441ed1fc123a03001b3"
+  integrity sha1-UvBWEP/53tQiYRRB7R/BI6AwAbM=
+
 lodash.sortby@^4.7.0:
   version "4.7.0"
   resolved "https://registry.yarnpkg.com/lodash.sortby/-/lodash.sortby-4.7.0.tgz#edd14c824e2cc9c1e0b0a1b42bb5210516a42438"
@@ -8639,6 +8651,13 @@ next@9.5.2:
     web-vitals "0.2.1"
     webpack "4.44.1"
     webpack-sources "1.4.3"
+
+nextjs-sitemap-generator@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/nextjs-sitemap-generator/-/nextjs-sitemap-generator-1.1.1.tgz#38943bb37b44391755975cba93d00f3a951e2442"
+  integrity sha512-267LecBlyAp2HNApn5cNTNxSUCvwBvObrr7AtCe5BYO7VJ3pw8vC70nc4KMEqB2YikTBsESojHtB/aOocmGK5A==
+  dependencies:
+    date-fns "^2.9.0"
 
 nice-try@^1.0.4:
   version "1.0.5"
@@ -9411,6 +9430,11 @@ phin@^2.9.1:
   version "2.9.3"
   resolved "https://registry.yarnpkg.com/phin/-/phin-2.9.3.tgz#f9b6ac10a035636fb65dfc576aaaa17b8743125c"
   integrity sha512-CzFr90qM24ju5f88quFC/6qohjC144rehe5n6DH900lgXmUe86+xCKc10ev56gRKC4/BkHUoG4uSiQgBiIXwDA==
+
+photoswipe@^4.1.0:
+  version "4.1.3"
+  resolved "https://registry.yarnpkg.com/photoswipe/-/photoswipe-4.1.3.tgz#59f49494eeb9ddab5888d03392926a19bc197550"
+  integrity sha512-89Z43IRUyw7ycTolo+AaiDn3W1EEIfox54hERmm9bI12IB9cvRfHSHez3XhAyU8XW2EAFrC+2sKMhh7SJwn0bA==
 
 picomatch@^2.0.4, picomatch@^2.0.5, picomatch@^2.2.1, picomatch@^2.2.2:
   version "2.2.2"
@@ -10360,6 +10384,11 @@ react-countup@^4.3.3:
     prop-types "^15.7.2"
     warning "^4.0.3"
 
+react-customizable-progressbar@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/react-customizable-progressbar/-/react-customizable-progressbar-1.0.1.tgz#af25fbcd332bb7fc708d1d341b6d8119a042f942"
+  integrity sha512-ACeAi5lwJUogXke0AVziGs7AOgI5n/fjQYaantJ4AlCQoDDhMjVRy0z+JTNug+obqBFCLkGQYtj6zBv0IvKY8g==
+
 react-dom@16.13.1:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.13.1.tgz#c1bd37331a0486c078ee54c4740720993b2e0e7f"
@@ -10417,6 +10446,16 @@ react-particles-js@3.3.0:
   dependencies:
     lodash "^4.17.11"
     tsparticles "^1.17.1"
+
+react-photoswipe@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/react-photoswipe/-/react-photoswipe-1.3.0.tgz#016dd978450a8406776db97511eaf96f2ffb9cfb"
+  integrity sha512-1ok6vXFAj/rd60KIzF0YwCdq1Tcl+8yKqWJHbPo43lJBuwUi+LBosmBdJmswpiOzMn2496ekU0k/r6aHWQk7PQ==
+  dependencies:
+    classnames "^2.2.3"
+    lodash.pick "^4.2.1"
+    photoswipe "^4.1.0"
+    prop-types "^15.5.10"
 
 react-refresh@0.8.3:
   version "0.8.3"
@@ -12488,6 +12527,13 @@ url@^0.11.0:
     punycode "1.3.2"
     querystring "0.2.0"
 
+use-places-autocomplete@^1.3.10:
+  version "1.3.10"
+  resolved "https://registry.yarnpkg.com/use-places-autocomplete/-/use-places-autocomplete-1.3.10.tgz#2797ebb7f309aca8a60fe3ca8e3f2451b695c2a9"
+  integrity sha512-2WhezFliaLhfFX7NO12Y+gSzmdiml/l4KCyFKKk4cjtWR6mWTXuNs66ZJrm4beTRPBugngCyo2AmPy98AvlZpQ==
+  dependencies:
+    lodash.debounce "^4.0.8"
+
 use-subscription@1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/use-subscription/-/use-subscription-1.4.1.tgz#edcbcc220f1adb2dd4fa0b2f61b6cc308e620069"
@@ -12589,7 +12635,7 @@ validate-npm-package-license@^3.0.1:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
 
-validator@^13.1.1:
+validator@>=4.0.0, validator@^13.1.1:
   version "13.1.1"
   resolved "https://registry.yarnpkg.com/validator/-/validator-13.1.1.tgz#f8811368473d2173a9d8611572b58c5783f223bf"
   integrity sha512-8GfPiwzzRoWTg7OV1zva1KvrSemuMkv07MA9TTl91hfhe+wKrsrgVN4H2QSFd/U/FhiU3iWPYVgvbsOGwhyFWw==
