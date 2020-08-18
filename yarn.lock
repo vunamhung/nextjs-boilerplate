@@ -10452,6 +10452,11 @@ react-sweet-state@^2.3.1:
   resolved "https://registry.yarnpkg.com/react-sweet-state/-/react-sweet-state-2.3.1.tgz#0effa906c324ffb781241151d85fbff62508642a"
   integrity sha512-dqTIK/rxr4j2TzSWl3GB2XBwTJ3Ux8i+B80T/uKVrLUib1LRjfweHi8ezKzCH48KWTUs+SGc26EZjWUtv7y6aA==
 
+react-table@^7.5.0:
+  version "7.5.0"
+  resolved "https://registry.yarnpkg.com/react-table/-/react-table-7.5.0.tgz#87326d92cdffbbf970f49b395bcafc3f84989ddf"
+  integrity sha512-hLsbNqLJkkYiATVteM8mthP8y5vnLPB2qdi9FeGZjsvb2m5vxj6cavIgk35oulvBmYD6Kox0HFfI332HPZpC7w==
+
 react-use-gesture@^7.0.15:
   version "7.0.15"
   resolved "https://registry.yarnpkg.com/react-use-gesture/-/react-use-gesture-7.0.15.tgz#93c651e916a31cfb12d079e7fa1543d5b0511e07"
