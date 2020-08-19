@@ -3,7 +3,7 @@ import { NextSeo } from 'next-seo';
 import ReactMarkdown from 'react-markdown/with-html';
 import Wrapper from '@/modules/Wrapper';
 import Container from '@/components/Container';
-import { getPostBySlug, getPostsSlugs } from '@/lib/posts';
+import { getPostBySlug, getPostsSlugs } from '@/utilities/posts';
 
 export default function Post({ content, description, title, dateRelative, nextPost, previousPost }) {
   return (

@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { NextSeo } from 'next-seo';
 import Wrapper from '@/modules/Wrapper';
 import Container from '@/components/Container';
-import { getSortedPosts } from '@/lib/posts';
+import { getSortedPosts } from '@/utilities/posts';
 
 export default function Home({ posts }) {
   return (

@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import Router from 'next/router';
 import { DefaultSeo } from 'next-seo';
-import * as gtag from '@/lib/gtag';
+import * as gtag from '@/utilities/gtag';
 
 import '@/assets/styles/index.css';
 import 'rc-drawer/assets/index.css';

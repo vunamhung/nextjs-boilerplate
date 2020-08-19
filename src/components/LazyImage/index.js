@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import LazyLoad from 'vanilla-lazyload';
-import useOnMount from '@/lib/hooks/useOnMount';
+import useOnMount from '@/hooks/useOnMount';
 
 export default function LazyImage({ className, placeholder, src, srcset, sizes, width, height, alt }) {
   useOnMount(() => {

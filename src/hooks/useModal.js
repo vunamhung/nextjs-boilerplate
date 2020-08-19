@@ -1,6 +1,6 @@
 import { createPortal } from 'react-dom';
 import { useCallback, useState } from 'react';
-import useOutsideClick from '@/lib/hooks/useOutsideClick';
+import useOutsideClick from '@/hooks/useOutsideClick';
 
 const Modal = ({ children, isOpen = false, close, elementId = 'root' }) => {
   const ref = useOutsideClick(close);

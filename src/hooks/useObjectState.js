@@ -1,13 +1,5 @@
 import { useState } from 'react';
-import { isObj } from '@/lib/helpers';
-
-const objCheck = (data) => {
-  if (!isObj(data)) {
-    throw new Error('`useObjectState` only accepts objects.');
-  }
-
-  return data;
-};
+import { objCheck } from '@/utilities';
 
 export default function useObjectState(initialState = {}) {
   const [state, setState] = useState(() => objCheck(initialState));

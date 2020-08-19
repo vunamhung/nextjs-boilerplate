@@ -5,21 +5,21 @@ export default function useFetch({ api, path, method = 'GET', config = null, dat
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        api[method](path, JSON.parse(config), JSON.parse(data))
-          .then((res) => {
-            setResponse(res.data);
-          })
-          .finally(() => {
-            setIsLoading(false);
-          });
-      } catch (err) {
-        setError(err);
-      }
-    };
+  const fetchData = async () => {
+    try {
+      api[method](path, JSON.parse(config), JSON.parse(data))
+        .then((res) => {
+          setResponse(res.data);
+        })
+        .finally(() => {
+          setIsLoading(false);
+        });
+    } catch (err) {
+      setError(err);
+    }
+  };
 
+  useEffect(() => {
     fetchData();
   }, [api, method, path, data, config]);
 

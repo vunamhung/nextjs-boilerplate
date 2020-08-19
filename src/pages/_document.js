@@ -1,6 +1,6 @@
 import Document, { Head, Main, NextScript } from 'next/document';
-import { GA_TRACKING_ID } from '@/lib/gtag';
-import { APP_DESCRIPTION, APP_NAME } from '@/lib/constants';
+import { GA_TRACKING_ID } from '@/utilities/gtag';
+import { APP_DESCRIPTION, APP_NAME } from '@/utilities/constants';
 
 export default class CustomDocument extends Document {
   render() {
