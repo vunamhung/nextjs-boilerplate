@@ -13,9 +13,4 @@ module.exports = {
   future: {
     removeDeprecatedGapUtilities: true,
   },
-  experimental: {
-    applyComplexClasses: true,
-    uniformColorPalette: true,
-    defaultLineHeights: true,
-  },
 };
