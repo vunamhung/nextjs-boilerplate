@@ -16,7 +16,7 @@ export default class CustomDocument extends Document {
           <meta name='mobile-web-app-capable' content='yes' />
           <meta name='theme-color' content='#FFFFFF' />
           <link rel='icon' href='/icons/favicon.ico' />
-          <link rel='apple-touch-icon' href='/icons/icon-512.png' />
+          <link rel='apple-touch-icon' href='/icons/apple.png' />
           <link rel='manifest' href='/manifest.json' />
           <link
             rel='preload'
