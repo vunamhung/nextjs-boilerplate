@@ -2,7 +2,7 @@
   "name": "nextjs-boilerplate",
   "version": "0.1.0",
   "engines": {
-    "node": ">=14.8"
+    "node": "13.x"
   },
   "private": true,
   "scripts": {
