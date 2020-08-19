@@ -3,7 +3,7 @@ import Router from "next/router";
 import { DefaultSeo } from "next-seo";
 import * as gtag from "@/lib/gtag";
 
-import "@/styles/index.css";
+import "@/assets/styles/index.css";
 import "rc-drawer/assets/index.css";
 import "@glidejs/glide/dist/css/glide.core.min.css";
 

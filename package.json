@@ -4,13 +4,13 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "predev": "tailwindcss build styles/tailwind.css -o public/tailwind.output.css",
+    "predev": "tailwindcss build src/assets/styles/tailwind.css -o public/tailwind.output.css",
     "prebuild": "cross-env NODE_ENV=production yarn run predev",
     "build": "next build",
     "build:analyze": "cross-env ANALYZE=true next build",
     "start": "next start",
     "export:html": "next build && next export -o dist",
-    "svgr": "svgr images/svg/ -d icons/ --icon",
+    "svgr": "svgr src/assets/svg/ -d src/icons/ --icon",
     "debug": "NODE_OPTIONS='--inspect' next dev"
   },
   "postcss": {
@@ -115,7 +115,12 @@
   },
   "bit": {
     "env": {},
-    "componentsDefaultDirectory": "components/{name}",
-    "packageManager": "yarn"
+    "componentsDefaultDirectory": "src/components/{name}",
+    "packageManager": "yarn",
+    "resolveModules": {
+      "aliases": {
+        "@": "src"
+      }
+    }
   }
 }

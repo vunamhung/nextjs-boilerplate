@@ -2,14 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/public/*": ["public/*"],
-      "@/stores/*": ["stores/*"],
-      "@/components/*": ["components/*"],
-      "@/lib/*": ["lib/*"],
-      "@/lib": ["lib/index.js"],
-      "@/icons": ["icons/index.js"],
-      "@/styles/*": ["styles/*"],
-      "@/modules/*": ["modules/*"]
+      "@/*": ["src/*"]
     }
   }
 }

@@ -1,4 +1,4 @@
-import useDrawer from "../../stores/drawer";
+import useDrawer from "@/stores/drawer";
 import Drawer from "../Drawer";
 import HamburgMenu from "../HamburgMenu";
 import ScrollSpyMenu from "../ScrollSpyMenu";

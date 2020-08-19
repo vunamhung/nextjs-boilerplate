@@ -3,7 +3,7 @@ import Scrollspy from "react-scrollspy";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import Link from "next/link";
 import classNames from "classnames";
-import useDrawer from "../../stores/drawer";
+import useDrawer from "@/stores/drawer";
 
 export default function ScrollSpyMenu({ className, menuItems, drawerClose, ...props }) {
   const [, { toggle }] = useDrawer();
