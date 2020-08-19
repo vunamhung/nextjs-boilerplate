@@ -25,7 +25,7 @@ export default function LazyImage({ className, placeholder, src, srcset, sizes, 
       data-sizes={sizes}
       width={width}
       height={height}
-      alt={alt}
+      alt={alt || "thumbnail"}
     />
   );
 }
