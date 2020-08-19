@@ -1,6 +1,9 @@
 {
   "name": "nextjs-boilerplate",
   "version": "0.1.0",
+  "engines": {
+    "node": ">=14.8"
+  },
   "private": true,
   "scripts": {
     "dev": "next dev",
