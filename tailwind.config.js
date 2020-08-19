@@ -10,4 +10,12 @@ module.exports = {
   },
   variants: {},
   plugins: [require("@vunamhung/tailwind-config"), require("@tailwindcss/custom-forms")],
+  future: {
+    removeDeprecatedGapUtilities: true,
+  },
+  experimental: {
+    applyComplexClasses: true,
+    uniformColorPalette: true,
+    defaultLineHeights: true,
+  },
 };
