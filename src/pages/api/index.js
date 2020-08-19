@@ -1,9 +1,9 @@
-import knex from "knex";
-import Cors from "micro-cors";
-import { ApolloServer, gql } from "apollo-server-micro";
+import knex from 'knex';
+import Cors from 'micro-cors';
+import { ApolloServer, gql } from 'apollo-server-micro';
 
 const db = knex({
-  client: "mysql",
+  client: 'mysql',
   connection: {
     host: process.env.DB_HOST,
     user: process.env.DB_USER,
@@ -13,7 +13,7 @@ const db = knex({
 });
 
 const cors = Cors({
-  allowMethods: ["POST", "OPTIONS"],
+  allowMethods: ['POST', 'OPTIONS'],
 });
 
 const typeDefs = gql`
@@ -35,7 +35,7 @@ const typeDefs = gql`
 const resolvers = {
   Query: {
     posts(parent, args, { db }) {
-      return db.select("*").from("wp_posts");
+      return db.select('*').from('wp_posts');
     },
   },
 };
@@ -46,7 +46,7 @@ const apolloServer = new ApolloServer({
   context: () => ({ db }),
 });
 
-const handler = apolloServer.createHandler({ path: "/api" });
+const handler = apolloServer.createHandler({ path: '/api' });
 
 export const config = {
   api: {

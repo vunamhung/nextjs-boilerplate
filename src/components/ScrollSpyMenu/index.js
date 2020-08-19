@@ -1,9 +1,9 @@
-import PropTypes from "prop-types";
-import Scrollspy from "react-scrollspy";
-import AnchorLink from "react-anchor-link-smooth-scroll";
-import Link from "next/link";
-import classNames from "classnames";
-import useDrawer from "@/stores/drawer";
+import PropTypes from 'prop-types';
+import Scrollspy from 'react-scrollspy';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
+import Link from 'next/link';
+import classNames from 'classnames';
+import useDrawer from '@/stores/drawer';
 
 export default function ScrollSpyMenu({ className, menuItems, drawerClose, ...props }) {
   const [, { toggle }] = useDrawer();
@@ -17,7 +17,7 @@ export default function ScrollSpyMenu({ className, menuItems, drawerClose, ...pr
   });
 
   return (
-    <Scrollspy items={scrollItems} className={classNames("scrollspy-menu", className)} {...props}>
+    <Scrollspy items={scrollItems} className={classNames('scrollspy-menu', className)} {...props}>
       {menuItems.map((menu, index) => (
         <li key={`menu-item-${index}`}>
           {menu.staticLink ? (
@@ -56,6 +56,6 @@ ScrollSpyMenu.propTypes = {
 };
 
 ScrollSpyMenu.defaultProps = {
-  componentTag: "ul",
-  currentClassName: "is-current",
+  componentTag: 'ul',
+  currentClassName: 'is-current',
 };

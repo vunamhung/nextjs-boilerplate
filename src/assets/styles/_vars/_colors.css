@@ -1,7 +1,7 @@
 :root {
   --color-white: #fff;
   --color-black: #000;
-  --color-transparent: "transparent";
+  --color-transparent: 'transparent';
 
   --color-neutral-000: var(--color-white);
   --color-neutral-100: #f7fafc;

@@ -1,9 +1,9 @@
-const { resolve } = require("path");
+const { resolve } = require('path');
 
 module.exports = {
   resolve: {
     alias: {
-      "@": resolve(__dirname, "./src"),
+      '@': resolve(__dirname, './src'),
     },
   },
 };

@@ -1,5 +1,5 @@
-import PropTypes from "prop-types";
-import RcDrawer from "rc-drawer";
+import PropTypes from 'prop-types';
+import RcDrawer from 'rc-drawer';
 
 export default function Drawer({ className, children, closeButton, closeButtonStyle, drawerHandler, toggleHandler, open, ...props }) {
   return (
@@ -7,7 +7,7 @@ export default function Drawer({ className, children, closeButton, closeButtonSt
       <RcDrawer open={open} onClose={toggleHandler} className={className} {...props}>
         {children}
       </RcDrawer>
-      <div className="drawer-handler inline-block" onClick={toggleHandler}>
+      <div className='drawer-handler inline-block' onClick={toggleHandler}>
         {drawerHandler}
       </div>
     </>
@@ -18,12 +18,12 @@ Drawer.propTypes = {
   className: PropTypes.string,
   closeButton: PropTypes.element,
   width: PropTypes.string,
-  placement: PropTypes.oneOf(["left", "right", "top", "bottom"]),
+  placement: PropTypes.oneOf(['left', 'right', 'top', 'bottom']),
   drawerHandler: PropTypes.element.isRequired,
 };
 
 Drawer.defaultProps = {
-  width: "300px",
+  width: '300px',
   handler: false,
   level: null,
 };

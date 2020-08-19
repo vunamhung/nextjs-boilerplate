@@ -1,8 +1,8 @@
-@import "_vars/*";
-@import "variants/*";
-@import "tailwindcss/base";
-@import "base/*";
-@import "elements/*";
-@import "../../components/*/index.css";
-@import "../../modules/*/index.css";
+@import '_vars/*';
+@import 'variants/*';
+@import 'tailwindcss/base';
+@import 'base/*';
+@import 'elements/*';
+@import '../../components/*/index.css';
+@import '../../modules/*/index.css';
 @tailwind components;

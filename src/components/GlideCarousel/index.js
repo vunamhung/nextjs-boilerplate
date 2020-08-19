@@ -1,7 +1,7 @@
-import { useEffect } from "react";
-import PropTypes from "prop-types";
-import Glide from "@glidejs/glide";
-import classNames from "classnames";
+import { useEffect } from 'react';
+import PropTypes from 'prop-types';
+import Glide from '@glidejs/glide';
+import classNames from 'classnames';
 
 export default function GlideCarousel({
   className,
@@ -16,7 +16,7 @@ export default function GlideCarousel({
 }) {
   // Load glide
   useEffect(() => {
-    const glide = new Glide(carouselSelector ? `#${carouselSelector}` : "#glide", { ...options });
+    const glide = new Glide(carouselSelector ? `#${carouselSelector}` : '#glide', { ...options });
     glide.mount();
   });
 
@@ -27,26 +27,26 @@ export default function GlideCarousel({
   }
 
   return (
-    <div className={classNames("glide", className)} id={carouselSelector ?? "glide"}>
-      <div className="glide__track" data-glide-el="track">
-        <ul className="glide__slides">{children}</ul>
+    <div className={classNames('glide', className)} id={carouselSelector ?? 'glide'}>
+      <div className='glide__track' data-glide-el='track'>
+        <ul className='glide__slides'>{children}</ul>
       </div>
       {controls && (
-        <div className="glide__controls flex" data-glide-el="controls">
-          <div className="glide__prev--area" data-glide-dir="<">
+        <div className='glide__controls flex' data-glide-el='controls'>
+          <div className='glide__prev--area' data-glide-dir='<'>
             {prevButton ? prevButton : <button>Prev</button>}
           </div>
-          <div className="glide__next--area" data-glide-dir=">">
+          <div className='glide__next--area' data-glide-dir='>'>
             {nextButton ? nextButton : <button>Next</button>}
           </div>
         </div>
       )}
 
       {bullets && (
-        <div className="glide__bullets" data-glide-el="controls[nav]">
+        <div className='glide__bullets' data-glide-el='controls[nav]'>
           <>
             {totalBullets.map((index) => (
-              <div key={index} className="glide__bullet" data-glide-dir={`=${index}`} />
+              <div key={index} className='glide__bullet' data-glide-dir={`=${index}`} />
             ))}
           </>
         </div>

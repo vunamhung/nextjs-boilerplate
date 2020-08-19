@@ -1,5 +1,5 @@
-import { useState } from "react";
-import locales from "countries-list";
+import { useState } from 'react';
+import locales from 'countries-list';
 
 const countries = [];
 

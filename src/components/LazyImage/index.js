@@ -1,12 +1,12 @@
-import { useEffect } from "react";
-import LazyLoad from "vanilla-lazyload";
-import useOnMount from "@/lib/hooks/useOnMount";
+import { useEffect } from 'react';
+import LazyLoad from 'vanilla-lazyload';
+import useOnMount from '@/lib/hooks/useOnMount';
 
 export default function LazyImage({ className, placeholder, src, srcset, sizes, width, height, alt }) {
   useOnMount(() => {
     if (!document.lazyLoadInstance) {
       document.lazyLoadInstance = new LazyLoad({
-        elements_selector: ".lazy",
+        elements_selector: '.lazy',
       });
     }
   });
@@ -25,7 +25,7 @@ export default function LazyImage({ className, placeholder, src, srcset, sizes, 
       data-sizes={sizes}
       width={width}
       height={height}
-      alt={alt || "thumbnail"}
+      alt={alt || 'thumbnail'}
     />
   );
 }

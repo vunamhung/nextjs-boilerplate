@@ -1,9 +1,9 @@
-import { useState } from "react";
-import { isObj } from "@/lib/helpers";
+import { useState } from 'react';
+import { isObj } from '@/lib/helpers';
 
 const objCheck = (data) => {
   if (!isObj(data)) {
-    throw new Error("`useObjectState` only accepts objects.");
+    throw new Error('`useObjectState` only accepts objects.');
   }
 
   return data;

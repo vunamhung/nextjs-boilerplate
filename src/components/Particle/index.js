@@ -1,12 +1,12 @@
-import Particles from "react-particles-js";
+import Particles from 'react-particles-js';
 
-import Particle1 from "./images/particle-1.png";
-import Particle2 from "./images/particle-2.png";
-import Particle3 from "./images/particle-3.png";
-import Particle4 from "./images/particle-4.png";
-import Particle5 from "./images/particle-5.png";
-import Particle6 from "./images/particle-2.png";
-import Particle7 from "./images/particle-4.png";
+import Particle1 from './images/particle-1.png';
+import Particle2 from './images/particle-2.png';
+import Particle3 from './images/particle-3.png';
+import Particle4 from './images/particle-4.png';
+import Particle5 from './images/particle-5.png';
+import Particle6 from './images/particle-2.png';
+import Particle7 from './images/particle-4.png';
 
 const params = {
   particles: {
@@ -16,7 +16,7 @@ const params = {
     },
 
     shape: {
-      type: ["images"],
+      type: ['images'],
       images: [
         {
           src: `${Particle1}`,
@@ -70,7 +70,7 @@ const params = {
     move: {
       enable: true,
       speed: 1.5,
-      direction: "none",
+      direction: 'none',
       random: false,
       straight: false,
       bounce: true,

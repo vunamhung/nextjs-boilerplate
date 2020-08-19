@@ -1,6 +1,6 @@
-import { readdirSync, readFileSync } from "fs";
-import { formatDistance } from "date-fns";
-import matter from "gray-matter";
+import { readdirSync, readFileSync } from 'fs';
+import { formatDistance } from 'date-fns';
+import matter from 'gray-matter';
 
 export function getPostByFileName(filename) {
   const markdownWithMetadata = readFileSync(`content/posts/${filename}`).toString();
@@ -10,13 +10,13 @@ export function getPostByFileName(filename) {
   return {
     ...data,
     content,
-    slug: filename.replace(".md", ""),
+    slug: filename.replace('.md', ''),
     dateRelative: formatDistance(new Date(data.date), new Date()),
   };
 }
 
 export function getSortedPosts() {
-  const files = readdirSync("content/posts");
+  const files = readdirSync('content/posts');
 
   return files
     .map((filename) => getPostByFileName(filename))
@@ -25,11 +25,11 @@ export function getSortedPosts() {
 }
 
 export function getPostsSlugs() {
-  const files = readdirSync("content/posts");
+  const files = readdirSync('content/posts');
 
   return files.map((filename) => ({
     params: {
-      slug: filename.replace(".md", ""),
+      slug: filename.replace('.md', ''),
     },
   }));
 }

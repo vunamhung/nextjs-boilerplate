@@ -1,8 +1,8 @@
-const withPlugins = require("next-compose-plugins");
-const withFonts = require("next-fonts");
-const withPWA = require("next-pwa");
-const withOptimizedImages = require("next-optimized-images");
-const withBundleAnalyzer = require("@next/bundle-analyzer");
+const withPlugins = require('next-compose-plugins');
+const withFonts = require('next-fonts');
+const withPWA = require('next-pwa');
+const withOptimizedImages = require('next-optimized-images');
+const withBundleAnalyzer = require('@next/bundle-analyzer');
 
 module.exports = withPlugins([
   withFonts,
@@ -13,7 +13,7 @@ module.exports = withPlugins([
         quality: 90,
       },
       webp: {
-        preset: "default",
+        preset: 'default',
         quality: 75,
       },
     },
@@ -21,15 +21,15 @@ module.exports = withPlugins([
   [
     withBundleAnalyzer,
     {
-      enabled: process.env.ANALYZE === "true",
+      enabled: process.env.ANALYZE === 'true',
     },
   ],
   [
     withPWA,
     {
       pwa: {
-        dest: "public",
-        disable: process.env.NODE_ENV !== "production",
+        dest: 'public',
+        disable: process.env.NODE_ENV !== 'production',
         buildExcludes: [/static\/images\/.*$/],
       },
     },

@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import lazy from "lazy";
+import { useEffect, useState } from 'react';
+import lazy from 'lazy';
 
 export default function usePrefetch(factory) {
   const [component, setComponent] = useState(null);

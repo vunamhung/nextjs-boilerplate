@@ -1,6 +1,6 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback } from 'react';
 
-export default function useEventTarget(initialValue = "") {
+export default function useEventTarget(initialValue = '') {
   const [value, setValue] = useState(initialValue);
 
   const onChange = useCallback(({ target }) => setValue(target.value), []); // reusable value fetch logic

@@ -1,8 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
-export default function useFetch({ api, path, method = "GET", config = null, data = null }) {
+export default function useFetch({ api, path, method = 'GET', config = null, data = null }) {
   const [response, setResponse] = useState(null);
-  const [error, setError] = useState("");
+  const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {

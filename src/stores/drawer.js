@@ -1,4 +1,4 @@
-import { createStore, createHook } from "react-sweet-state";
+import { createStore, createHook } from 'react-sweet-state';
 
 const Store = createStore({
   initialState: {
