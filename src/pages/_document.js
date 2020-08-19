@@ -15,8 +15,8 @@ export default class CustomDocument extends Document {
           <meta name='format-detection' content='telephone=no' />
           <meta name='mobile-web-app-capable' content='yes' />
           <meta name='theme-color' content='#FFFFFF' />
-          <link rel='icon' href='/favicon.ico' />
-          <link rel='apple-touch-icon' href='/icon-512.png' />
+          <link rel='icon' href='/icons/favicon.ico' />
+          <link rel='apple-touch-icon' href='/icons/icon-512.png' />
           <link rel='manifest' href='/manifest.json' />
           <link
             rel='preload'

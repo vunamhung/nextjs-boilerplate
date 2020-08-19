@@ -8,18 +8,18 @@
   "start_url": "/",
   "icons": [
     {
-      "src": "/icon-192.png",
+      "src": "/icons/android.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/icon-196.png",
+      "src": "/icons/maskable.png",
       "type": "image/png",
       "sizes": "196x196",
       "purpose": "maskable"
     },
     {
-      "src": "/icon-512.png",
+      "src": "/icons/icon-512.png",
       "type": "image/png",
       "sizes": "512x512"
     }

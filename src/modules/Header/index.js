@@ -7,7 +7,7 @@ const Header = ({ fluid }) => {
   return (
     <header className='header py-6'>
       <Container fluid={fluid} className='flex justify-between items-center'>
-        <Logo src='/vercel.svg' name='Next' url='/' imgClass='h-8' />
+        <Logo src='/images/logo.svg' name='Next' url='/' imgClass='h-8' />
         <NavBar />
       </Container>
     </header>
