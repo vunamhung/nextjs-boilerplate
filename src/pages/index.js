@@ -12,7 +12,7 @@ export default function Home({ posts }) {
         {posts.map(({ title, description, dateRelative, slug }) => (
           <article className='mb-6' key={title}>
             <header>
-              <h3>
+              <h3 className='font-bold'>
                 <Link href='/post/[slug]' as={`/post/${slug}`}>
                   <a>{title}</a>
                 </Link>

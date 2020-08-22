@@ -10,9 +10,11 @@ export default function Post({ content, description, title, dateRelative, nextPo
     <Wrapper>
       <NextSeo title={title} description={description} />
       <Container>
-        <article>
-          <h1>{title}</h1>
+        <div className='mb-4'>
+          <h1 className='font-bold'>{title}</h1>
           <span className='text-sm text-neutral-600'>{dateRelative} ago</span>
+        </div>
+        <article className='prose prose-sm sm:prose lg:prose-lg'>
           <ReactMarkdown escapeHtml={false} source={content} />
         </article>
         <nav className='flex justify-between py-10'>

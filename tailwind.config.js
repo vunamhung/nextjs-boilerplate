@@ -1,5 +1,11 @@
 module.exports = {
-  purge: ['src/modules/**', 'src/components/**', 'src/pages/**'],
+  purge: {
+    mode: 'all',
+    content: ['src/modules/**', 'src/components/**', 'src/pages/**'],
+    options: {
+      whitelist: ['h1', 'h2', 'h3', 'h4', 'p', 'blockquote', 'strong', 'code'],
+    },
+  },
   theme: {
     extend: {
       container: {
@@ -9,7 +15,7 @@ module.exports = {
     },
   },
   variants: {},
-  plugins: [require('@vunamhung/tailwind-config'), require('@tailwindcss/custom-forms')],
+  plugins: [require('@vunamhung/tailwind-config'), require('@tailwindcss/custom-forms'), require('@tailwindcss/typography')],
   future: {
     removeDeprecatedGapUtilities: true,
   },

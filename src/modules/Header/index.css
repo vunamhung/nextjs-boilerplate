@@ -4,6 +4,9 @@
 }
 
 .headroom {
+  &-wrapper {
+    margin-bottom: var(--spacing-8);
+  }
   &--pinned,
   &--unpinned {
     .header {
