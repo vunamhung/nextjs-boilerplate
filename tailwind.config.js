@@ -1,11 +1,5 @@
 module.exports = {
-  purge: {
-    mode: 'all',
-    content: ['src/modules/**', 'src/components/**', 'src/pages/**'],
-    options: {
-      whitelist: ['h1', 'h2', 'h3', 'h4', 'p', 'blockquote', 'strong', 'code', 'pre', '.lead'],
-    },
-  },
+  purge: ['src/modules/**', 'src/components/**', 'src/pages/**'],
   theme: {
     extend: {
       container: {
