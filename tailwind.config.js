@@ -3,7 +3,7 @@ module.exports = {
     mode: 'all',
     content: ['src/modules/**', 'src/components/**', 'src/pages/**'],
     options: {
-      whitelist: ['h1', 'h2', 'h3', 'h4', 'p', 'blockquote', 'strong', 'code'],
+      whitelist: ['h1', 'h2', 'h3', 'h4', 'p', 'blockquote', 'strong', 'code', 'pre', '.lead'],
     },
   },
   theme: {

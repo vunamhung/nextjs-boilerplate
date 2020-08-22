@@ -9,27 +9,29 @@ export default function Post({ content, description, title, dateRelative, nextPo
   return (
     <Wrapper>
       <NextSeo title={title} description={description} />
-      <Container>
-        <div className='mb-4'>
-          <h1 className='font-bold'>{title}</h1>
-          <span className='text-sm text-neutral-600'>{dateRelative} ago</span>
-        </div>
-        <article className='prose prose-sm sm:prose lg:prose-lg'>
-          <ReactMarkdown escapeHtml={false} source={content} />
-        </article>
-        <nav className='flex justify-between py-10'>
-          {previousPost && (
-            <Link href={'/post/[slug]'} as={`/post/${previousPost.slug}`}>
-              <a className='text-lg font-bold'>← {previousPost.title}</a>
-            </Link>
-          )}
-          {nextPost && (
-            <Link href={'/post/[slug]'} as={`/post/${nextPost.slug}`}>
-              <a className='text-lg font-bold'>{nextPost.title} →</a>
-            </Link>
-          )}
-        </nav>
-      </Container>
+      <main>
+        <Container>
+          <div className='mb-4'>
+            <h1 className='font-bold'>{title}</h1>
+            <span className='text-sm text-neutral-600'>{dateRelative} ago</span>
+          </div>
+          <article className='prose prose-sm sm:prose lg:prose-lg'>
+            <ReactMarkdown escapeHtml={false} source={content} />
+          </article>
+          <nav className='flex justify-between py-10'>
+            {previousPost && (
+              <Link href={'/post/[slug]'} as={`/post/${previousPost.slug}`}>
+                <a className='text-lg font-bold'>← {previousPost.title}</a>
+              </Link>
+            )}
+            {nextPost && (
+              <Link href={'/post/[slug]'} as={`/post/${nextPost.slug}`}>
+                <a className='text-lg font-bold'>{nextPost.title} →</a>
+              </Link>
+            )}
+          </nav>
+        </Container>
+      </main>
     </Wrapper>
   );
 }
