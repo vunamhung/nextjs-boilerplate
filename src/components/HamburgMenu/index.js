@@ -1,8 +1,6 @@
-import classNames from 'classnames';
-
-export default function HamburgMenu({ className, wrapperStyle, barColor, width, height, ...props }) {
+export default function HamburgMenu({ className, barColor = 'var(--color-primary-500)', width = '44px', height = '30px', ...props }) {
   return (
-    <button className={classNames('hamburg-menu', className)} aria-label='hamburgMenu' {...props}>
+    <button className='hamburg-menu' aria-label='hamburgMenu' {...props}>
       <span />
       <span />
       <span />
@@ -18,9 +16,3 @@ export default function HamburgMenu({ className, wrapperStyle, barColor, width, 
     </button>
   );
 }
-
-HamburgMenu.defaultProps = {
-  barColor: 'var(--color-primary-500)',
-  width: '44px',
-  height: '30px',
-};

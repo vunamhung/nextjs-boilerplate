@@ -7,16 +7,16 @@ export default function GlideCarousel({
   className,
   children,
   options,
-  controls,
   prevButton,
   nextButton,
-  bullets,
   numberOfBullets,
-  carouselSelector,
+  bullets = false,
+  controls = true,
+  selector = 'glide',
 }) {
   // Load glide
   useEffect(() => {
-    const glide = new Glide(carouselSelector ? `#${carouselSelector}` : '#glide', { ...options });
+    const glide = new Glide(`#${selector}`, { ...options });
     glide.mount();
   });
 
@@ -27,7 +27,7 @@ export default function GlideCarousel({
   }
 
   return (
-    <div className={classNames('glide', className)} id={carouselSelector ?? 'glide'}>
+    <div className={classNames('glide', className)} id={selector}>
       <div className='glide__track' data-glide-el='track'>
         <ul className='glide__slides'>{children}</ul>
       </div>
@@ -57,15 +57,10 @@ export default function GlideCarousel({
 
 GlideCarousel.propTypes = {
   className: PropTypes.string,
-  options: PropTypes.object,
+  options: PropTypes.object.isRequired,
   controls: PropTypes.bool,
   bullets: PropTypes.bool,
   numberOfBullets: PropTypes.number,
   prevButton: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   nextButton: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
-};
-
-GlideCarousel.defaultProps = {
-  controls: true,
-  bullets: false,
 };
