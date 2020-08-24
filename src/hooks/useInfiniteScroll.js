@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { debounce } from '@/utilities/debounce';
 
 // More info: https://hackernoon.com/builing-an-infinite-scroll-using-react-hooks-pe113urj
 
@@ -15,8 +16,8 @@ export default function useInfiniteScroll(callback) {
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', debounce(handleScroll, 500));
+    return () => window.removeEventListener('scroll', debounce(handleScroll, 500));
   }, []);
 
   useEffect(() => {
