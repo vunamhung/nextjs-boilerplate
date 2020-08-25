@@ -16,7 +16,7 @@ export default function Button({ children, className, url, tone = 'primary', pri
   }
 
   return (
-    <button className={classes} {...props} onClick={onClick}>
+    <button className={classes} onClick={onClick} {...props}>
       {children}
     </button>
   );

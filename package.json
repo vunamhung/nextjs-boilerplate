@@ -4,8 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "predev": "tailwindcss build src/assets/styles/tailwind.css -o public/tailwind.output.css",
-    "prebuild": "cross-env NODE_ENV=production yarn run predev",
+    "predev": "tailwindcss build src/assets/styles/tailwind.css -o src/assets/styles/tailwind.output.css",
     "build": "next build",
     "build:analyze": "cross-env ANALYZE=true next build",
     "start": "next start",

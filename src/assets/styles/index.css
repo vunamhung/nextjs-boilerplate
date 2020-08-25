@@ -1,6 +1,6 @@
 @import '_vars/*';
-@import 'variants/*';
 @import 'tailwindcss/base';
+@import 'variants/*';
 @import 'base/*';
 @import 'elements/*';
 @import '../../components/*/index.css';
