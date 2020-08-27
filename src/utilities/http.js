@@ -1,4 +1,4 @@
 import axios from 'axios';
-import { BASE_URL } from '@/utilities/constants';
+import { API_URL } from '@/utilities/constants';
 
-export default axios.create({ baseURL: BASE_URL });
+export default axios.create({ baseURL: API_URL });

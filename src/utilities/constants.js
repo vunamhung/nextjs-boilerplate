@@ -1,3 +1,3 @@
-export const BASE_URL = 'https://wordpress.org/wp-json';
+export const API_URL = process.env.API_URL;
 export const APP_NAME = 'NextJS Boilerplate';
 export const APP_DESCRIPTION = 'NextJS Boilerplate';
