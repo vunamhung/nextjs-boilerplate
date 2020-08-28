@@ -13,7 +13,7 @@ export default function Post({ content, description, title, dateRelative, nextPo
         <Container>
           <div className='mb-4'>
             <h1 className='font-bold'>{title}</h1>
-            <span className='text-sm text-neutral-600'>{dateRelative} ago</span>
+            <span className='text-sm text-gray-600'>{dateRelative} ago</span>
           </div>
           <article className='prose prose-sm sm:prose lg:prose-lg'>
             <ReactMarkdown escapeHtml={false} source={content} />

@@ -17,7 +17,7 @@ export default function Home({ posts }) {
                   <a>{title}</a>
                 </Link>
               </h3>
-              <span className='text-sm text-neutral-600'>{dateRelative} ago</span>
+              <span className='text-sm text-gray-600'>{dateRelative} ago</span>
             </header>
             <section>
               <p>{description}</p>

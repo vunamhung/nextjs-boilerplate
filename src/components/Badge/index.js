@@ -20,7 +20,7 @@ export default function Badge({ children, className, tone = 'primary', priority,
 
 Badge.propTypes = {
   className: PropTypes.string,
-  tone: PropTypes.oneOf(['neutral', 'primary', 'success', 'warning', 'danger', 'info', 'urge']),
+  tone: PropTypes.oneOf(['gray', 'primary', 'success', 'warning', 'danger', 'info', 'urge']),
   priority: PropTypes.oneOf(['high', 'low']),
   fontSize: PropTypes.oneOf(['60%', '70%', '80%', '90%']),
 };

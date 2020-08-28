@@ -1,22 +1,22 @@
 :root {
-  /* NEUTRAL */
-  --color-neutral: var(--color-neutral-600);
-  --color-neutral-light: var(--color-neutral-300);
+  /* GRAY */
+  --color-gray: var(--color-gray-600);
+  --color-gray-light: var(--color-gray-300);
 
-  --color-neutral-low-title: var(--color-neutral-900);
-  --color-neutral-low-content: var(--color-neutral-700);
-  --color-neutral-low-fill: var(--color-transparent);
-  --color-neutral-low-background: var(--color-neutral-000);
-  --color-neutral-low-muted: var(--color-neutral-700);
+  --color-gray-low-title: var(--color-gray-900);
+  --color-gray-low-content: var(--color-gray-700);
+  --color-gray-low-fill: var(--color-transparent);
+  --color-gray-low-background: var(--color-gray-000);
+  --color-gray-low-muted: var(--color-gray-700);
 
-  --color-neutral-normal-content: var(--color-neutral-800);
-  --color-neutral-normal-fill: var(--color-neutral-200);
-  --color-neutral-normal-background: var(--color-neutral-100);
-  --color-neutral-normal-muted: var(--color-neutral-700);
+  --color-gray-normal-content: var(--color-gray-800);
+  --color-gray-normal-fill: var(--color-gray-200);
+  --color-gray-normal-background: var(--color-gray-100);
+  --color-gray-normal-muted: var(--color-gray-700);
 
-  --color-neutral-high-content: var(--color-neutral-000);
-  --color-neutral-high-fill: var(--color-neutral-700);
-  --color-neutral-high-muted: var(--color-neutral-300);
+  --color-gray-high-content: var(--color-gray-000);
+  --color-gray-high-fill: var(--color-gray-700);
+  --color-gray-high-muted: var(--color-gray-300);
 
   /* PRIMARY */
   --color-primary: var(--color-primary-500);

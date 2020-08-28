@@ -25,7 +25,7 @@ export default function Button({ children, className, url, tone = 'primary', pri
 Button.propTypes = {
   className: PropTypes.string,
   url: PropTypes.string,
-  tone: PropTypes.oneOf(['neutral', 'primary', 'success', 'warning', 'danger', 'info', 'urge']),
+  tone: PropTypes.oneOf(['gray', 'primary', 'success', 'warning', 'danger', 'info', 'urge']),
   priority: PropTypes.oneOf(['high', 'low']),
   size: PropTypes.oneOf(['small', 'large']),
 };

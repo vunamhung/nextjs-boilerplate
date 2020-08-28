@@ -1,4 +1,4 @@
-@each $tone in neutral, primary, success, warning, danger, info, urge {
+@each $tone in gray, primary, success, warning, danger, info, urge {
   .\~$(tone) {
     --color-content: var(--color-$(tone)-normal-content);
     --color-fill: var(--color-$(tone)-normal-fill);
