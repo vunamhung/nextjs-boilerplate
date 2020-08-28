@@ -2127,6 +2127,11 @@
   resolved "https://registry.yarnpkg.com/@tailwindcss/typography/-/typography-0.2.0.tgz#b597c83502e3c3c6641a8aaabda223cd494ab349"
   integrity sha512-aPgMH+CjQiScLZculoDNOQUrrK2ktkbl3D6uCLYp1jgYRlNDrMONu9nMu8LfwAeetYNpVNeIGx7WzHSu0kvECg==
 
+"@tailwindui/react@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@tailwindui/react/-/react-0.1.0.tgz#a6a82b9436875684b0ad1b3fce22fb7ab68b7d4b"
+  integrity sha512-WxMDrhE0fW7xM3ScHlPUOgKIcEM9WtEATwHy+ryER7B8x9adntn/OowH6j9mdohRH/rfsZo5aa82hKlFNSXFDg==
+
 "@types/accepts@*":
   version "1.3.5"
   resolved "https://registry.yarnpkg.com/@types/accepts/-/accepts-1.3.5.tgz#c34bec115cfc746e04fe5a059df4ce7e7b391575"

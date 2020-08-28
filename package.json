@@ -31,6 +31,7 @@
     "@glidejs/glide": "^3.4.1",
     "@rehooks/local-storage": "^2.4.0",
     "@rehooks/window-scroll-position": "^1.0.1",
+    "@tailwindui/react": "^0.1.0",
     "@vunamhung/arg.js": "^1.4.0",
     "ahooks": "2.5.0",
     "apollo-server-micro": "^2.16.1",
