@@ -4,15 +4,3 @@ html {
 body {
   overflow-x: hidden;
 }
-
-@responsive {
-  .hide {
-    display: none !important;
-  }
-  .show {
-    display: block !important;
-  }
-  .col-span-full {
-    grid-column: 1/-1;
-  }
-}
