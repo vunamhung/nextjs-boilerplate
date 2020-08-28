@@ -19,6 +19,7 @@
       "postcss-each": {},
       "tailwindcss": {},
       "postcss-nested": {},
+      "postcss-hexrgba": {},
       "postcss-flexbugs-fixes": {},
       "postcss-preset-env": {
         "autoprefixer": {
@@ -87,7 +88,7 @@
     "@tailwindcss/typography": "^0.2.0",
     "@typescript-eslint/eslint-plugin": "3.10.1",
     "@typescript-eslint/parser": "3.10.1",
-    "@vunamhung/tailwind-config": "0.9.8",
+    "@vunamhung/tailwind-config": "0.9.10",
     "babel-eslint": "^10.1.0",
     "cross-env": "^7.0.2",
     "eslint": "7.7.0",
@@ -107,6 +108,7 @@
     "postcss-each": "^0.10.0",
     "postcss-easy-import": "^3.0.0",
     "postcss-flexbugs-fixes": "^4.2.1",
+    "postcss-hexrgba": "^2.0.1",
     "postcss-import": "^12.0.1",
     "postcss-nested": "^4.2.3",
     "postcss-preset-env": "^6.7.0",

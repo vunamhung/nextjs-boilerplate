@@ -3,4 +3,6 @@ html {
 }
 body {
   overflow-x: hidden;
+  background-color: var(--color-gray-200);
+  color: var(--color-gray-900);
 }

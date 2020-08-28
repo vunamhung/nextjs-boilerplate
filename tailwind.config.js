@@ -8,9 +8,7 @@ module.exports = {
       },
     },
   },
-  variants: {
-    margin: ['responsive', 'last'],
-  },
+  variants: {},
   plugins: [require('@vunamhung/tailwind-config'), require('@tailwindcss/custom-forms'), require('@tailwindcss/typography')],
   future: {
     removeDeprecatedGapUtilities: true,
