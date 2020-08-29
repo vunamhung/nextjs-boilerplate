@@ -119,6 +119,7 @@
     "responsive-loader": "2.0.2",
     "svg-sprite-loader": "^5.0.0",
     "tailwindcss": "1.7.5",
+    "tailwindcss-aspect-ratio": "^3.0.0",
     "webp-loader": "^0.6.0"
   },
   "bit": {
