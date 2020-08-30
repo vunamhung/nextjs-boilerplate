@@ -1,7 +1,6 @@
 .field {
   border-color: var(--color-light);
   transition: box-shadow var(--field-transition-speed) ease-out, border var(--field-transition-speed) ease-out;
-  box-shadow: var(--box-shadow-lg);
   appearance: none;
   background-color: inherit;
   -webkit-appearance: none;
@@ -21,7 +20,7 @@
   }
 
   &:hover {
-    box-shadow: var(--field-hover-box-shadow, 0 0 0 theme('borderWidth.default') var(--color-light)), var(--box-shadow-lg);
+    box-shadow: var(--box-shadow-lg);
   }
 
   &:focus {
@@ -30,5 +29,5 @@
     @apply outline-none;
   }
 
-  @apply w-full max-w-full leading-tight border;
+  @apply w-full max-w-full border;
 }

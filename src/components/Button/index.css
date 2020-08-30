@@ -3,7 +3,6 @@
   color: var(--color-content);
   padding: var(--button-padding);
   font-size: var(--button-fontsize);
-  display: inline-flex;
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
@@ -18,7 +17,7 @@
   text-decoration: none;
   appearance: none;
 
-  @apply rounded outline-none font-secondary;
+  @apply outline-none font-secondary;
 
   &:hover,
   &:focus {
@@ -27,6 +26,12 @@
             their own way of denoting state. */
       filter: brightness(var(--button-filter-brightness));
     }
+  }
+
+  &:focus {
+    box-shadow: var(--field-focus-box-shadow, 0 0 0 theme('borderWidth.2') var(--color-light)), var(--box-shadow-lg);
+
+    @apply outline-none;
   }
 
   &[disabled] {
