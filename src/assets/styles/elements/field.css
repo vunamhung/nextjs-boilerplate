@@ -1,0 +1,34 @@
+.field {
+  border-color: var(--color-light);
+  transition: box-shadow var(--field-transition-speed) ease-out, border var(--field-transition-speed) ease-out;
+  box-shadow: var(--box-shadow-lg);
+  appearance: none;
+  background-color: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  &[disabled] {
+    cursor: not-allowed;
+    opacity: var(--field-disabled-opacity);
+  }
+
+  &[readonly] {
+    @apply select-all;
+  }
+
+  &::placeholder {
+    @apply opacity-50;
+  }
+
+  &:hover {
+    box-shadow: var(--field-hover-box-shadow, 0 0 0 theme('borderWidth.default') var(--color-light)), var(--box-shadow-lg);
+  }
+
+  &:focus {
+    box-shadow: var(--field-focus-box-shadow, 0 0 0 theme('borderWidth.2') var(--color-light)), var(--box-shadow-lg);
+
+    @apply outline-none;
+  }
+
+  @apply w-full max-w-full leading-tight border;
+}
