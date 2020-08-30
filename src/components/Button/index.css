@@ -29,7 +29,7 @@
   }
 
   &:focus {
-    box-shadow: var(--field-focus-box-shadow, 0 0 0 theme('borderWidth.2') var(--color-light)), var(--box-shadow-lg);
+    box-shadow: 0 0 0 theme('borderWidth.2') var(--color-light);
 
     @apply outline-none;
   }
