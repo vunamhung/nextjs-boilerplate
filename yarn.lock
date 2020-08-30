@@ -2466,10 +2466,10 @@
   resolved "https://registry.yarnpkg.com/@vunamhung/arg.js/-/arg.js-1.4.0.tgz#e2cd30a3455531696947a9c271da485a4e6243c7"
   integrity sha512-oShL5UvEK81lt6kyXv9cZcmCo5uwac0Ajzz0R7/ImSqQWn9YYcvcfWTX80PJvlLY7Of0Mp2YPZu6GMnPiZyjeg==
 
-"@vunamhung/tailwind-config@0.9.10":
-  version "0.9.10"
-  resolved "https://registry.yarnpkg.com/@vunamhung/tailwind-config/-/tailwind-config-0.9.10.tgz#7afabffe71dfd151c8b108c378d0c54f6a64b845"
-  integrity sha512-vxr/oPESAolYKI2W5mZGM11JxDDVA38SNoZVvn7uve3aO3/6piutvEmb/iU7bgz2bgeeW7jWes0c0xlfb8UT1Q==
+"@vunamhung/tailwind-config@0.9.11":
+  version "0.9.11"
+  resolved "https://registry.yarnpkg.com/@vunamhung/tailwind-config/-/tailwind-config-0.9.11.tgz#29d84c6e1a8ff3b84ce281d86717a7c909ee09b2"
+  integrity sha512-FSb/4/1LpQF/hQcDLi2gw4v3YwLaHB8coOWvVRi40YuFD4FGMpvZCgXavXPA20bcxtVquwRR3bAKJkES4cAcMQ==
   dependencies:
     lodash "^4.17.15"
 

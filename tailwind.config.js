@@ -12,6 +12,16 @@ module.exports = {
       container: {
         center: true,
         padding: 'var(--spacing-4)',
+        screens: {
+          sm: '100%',
+          md: '640px',
+          lg: '960px',
+          xl: '1140px',
+        },
+      },
+      inset: {
+        '1/2': '50%',
+        '-1/2': '-50%',
       },
     },
   },
