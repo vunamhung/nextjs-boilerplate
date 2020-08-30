@@ -28,7 +28,12 @@ module.exports = {
   variants: {
     aspectRatio: ['responsive', 'before'],
   },
-  plugins: [require('@vunamhung/tailwind-config'), require('@tailwindcss/custom-forms'), require('tailwindcss-aspect-ratio')],
+  plugins: [
+    require('@vunamhung/tailwind-config'),
+    require('@tailwindcss/custom-forms'),
+    require('@tailwindcss/typography'),
+    require('tailwindcss-aspect-ratio'),
+  ],
   future: {
     removeDeprecatedGapUtilities: true,
   },
