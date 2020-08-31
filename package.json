@@ -32,7 +32,7 @@
     "@glidejs/glide": "^3.4.1",
     "@rehooks/local-storage": "^2.4.0",
     "@rehooks/window-scroll-position": "^1.0.1",
-    "@tailwindui/react": "^0.1.0",
+    "@tailwindui/react": "0.1.1",
     "@vunamhung/arg.js": "^1.4.0",
     "ahooks": "2.5.0",
     "apollo-server-micro": "2.17.0",
@@ -117,7 +117,7 @@
     "react-markdown": "^4.3.1",
     "responsive-loader": "2.0.2",
     "svg-sprite-loader": "^5.0.0",
-    "tailwindcss": "1.7.5",
+    "tailwindcss": "1.7.6",
     "tailwindcss-aspect-ratio": "^3.0.0",
     "webp-loader": "^0.6.0"
   },
