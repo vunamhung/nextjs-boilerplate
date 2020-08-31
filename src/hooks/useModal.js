@@ -8,7 +8,7 @@ const Modal = ({ children, isOpen = false, close, elementId = 'root' }) => {
   if (isOpen === false) return null;
 
   return createPortal(
-    <div className='fixed flex top-0 left-0 bottom-0 right-0 z-30 justify-center items-center' style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
+    <div className='fixed flex top-0 left-0 bottom-0 right-0 z-30 justify-center items-center bg-black bg-opacity-50'>
       <div ref={ref}>{children}</div>
     </div>,
     document.getElementById(elementId),
