@@ -1,7 +1,11 @@
 const plugin = require('tailwindcss/plugin');
 
 module.exports = {
-  purge: ['src/modules/**', 'src/components/**', 'src/pages/**'],
+  purge: {
+    mode: 'layers',
+    layers: ['utilities'],
+    content: ['src/modules/**', 'src/components/**', 'src/pages/**'],
+  },
   theme: {
     colors: {
       transparent: 'transparent',
@@ -95,21 +99,16 @@ module.exports = {
         900: 'var(--color-urge-900)',
       },
     },
-    fontFamily: {
-      primary: 'var(--family-primary)',
-      secondary: 'var(--family-secondary)',
-      sans: 'var(--family-sans)',
-      serif: ['Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
-      mono: ['Menlo', 'Monaco', 'Consolas', '"Liberation Mono"', '"Courier New"', 'monospace'],
-    },
     aspectRatio: {
-      none: 0,
       square: [1, 1],
-      '16/9': [16, 9],
       '4/3': [4, 3],
-      '21/9': [21, 9],
     },
     extend: {
+      fontFamily: {
+        primary: 'var(--family-primary)',
+        secondary: 'var(--family-secondary)',
+        sans: 'var(--family-sans)',
+      },
       container: {
         center: true,
         padding: 'var(--spacing-4)',
