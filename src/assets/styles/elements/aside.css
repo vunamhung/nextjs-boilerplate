@@ -1,4 +1,5 @@
 .aside {
   border-left: var(--aside-border-width) solid var(--color-core);
+
   @apply block p-4 overflow-hidden rounded-lg rounded-l section;
 }

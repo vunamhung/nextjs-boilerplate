@@ -1,10 +1,10 @@
 .field {
   border-color: var(--color-light);
-  transition: box-shadow var(--field-transition-speed) ease-out, border var(--field-transition-speed) ease-out;
-  appearance: none;
-  background-color: inherit;
   -webkit-appearance: none;
   -moz-appearance: none;
+  appearance: none;
+  background-color: inherit;
+  transition: box-shadow var(--field-transition-speed) ease-out, border var(--field-transition-speed) ease-out;
 
   &[disabled] {
     cursor: not-allowed;
