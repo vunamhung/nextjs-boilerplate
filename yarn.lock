@@ -10817,6 +10817,11 @@ react-anchor-link-smooth-scroll@^1.0.12:
   resolved "https://registry.yarnpkg.com/react-anchor-link-smooth-scroll/-/react-anchor-link-smooth-scroll-1.0.12.tgz#5cd49c73e74be6d20b4c05a5e5c72d07ebbedac7"
   integrity sha512-aaY+9X0yh8YnC0jBfoTKpsiCLdO/Y6pCltww+VB+NnTBPDOvnIdnp1AlazajsDitc1j+cVSQ+yNtaVeTIMQbxw==
 
+react-colorful@^4.0.5:
+  version "4.0.5"
+  resolved "https://registry.yarnpkg.com/react-colorful/-/react-colorful-4.0.5.tgz#c29ff95b2f6da1de07e2a44d0f51c444040be1b8"
+  integrity sha512-Or1Rx4HPAR19FKCIQzAHgLipJCTmjkarudEmmuN4oQG6XmEHEvN4tbpsDPjVC8fQQ0zwzmOMBn5hmTotVy97Og==
+
 react-countup@^4.3.3:
   version "4.3.3"
   resolved "https://registry.yarnpkg.com/react-countup/-/react-countup-4.3.3.tgz#143a8d854d47290b73d6915eac20a12d839153c2"
