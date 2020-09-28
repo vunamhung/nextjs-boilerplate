@@ -4193,6 +4193,11 @@ clone@^2.1.1:
   resolved "https://registry.yarnpkg.com/clone/-/clone-2.1.2.tgz#1b7f4b9f591f1e8f83670401600345a02887435f"
   integrity sha1-G39Ln1kfHo+DZwQBYANFoCiHQ18=
 
+clsx@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/clsx/-/clsx-1.1.1.tgz#98b3134f9abbdf23b2663491ace13c5c03a73188"
+  integrity sha512-6/bPho624p3S2pMyvP5kKBPXnI3ufHLObBFCfgx+LkeR5lg2XYy2hqZqUf45ypD8COn2bhgGJSUE+l5dhNBieA==
+
 coa@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/coa/-/coa-2.0.2.tgz#43f6c21151b4ef2bf57187db0d73de229e3e7ec3"
@@ -10835,6 +10840,13 @@ react-customizable-progressbar@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/react-customizable-progressbar/-/react-customizable-progressbar-1.0.1.tgz#af25fbcd332bb7fc708d1d341b6d8119a042f942"
   integrity sha512-ACeAi5lwJUogXke0AVziGs7AOgI5n/fjQYaantJ4AlCQoDDhMjVRy0z+JTNug+obqBFCLkGQYtj6zBv0IvKY8g==
+
+react-data-grid@^7.0.0-canary.22:
+  version "7.0.0-canary.22"
+  resolved "https://registry.yarnpkg.com/react-data-grid/-/react-data-grid-7.0.0-canary.22.tgz#4f85488af843d8a42d8e5711494adf68839cda1b"
+  integrity sha512-EQtclStnwOyBMBtJTREVYQw0MJ+z99lOIiFU5veVH1BmkcLPP885v4ivk1UFTo7sqCcGJbmvnoFMlO+6Xq3HlA==
+  dependencies:
+    clsx "^1.1.1"
 
 react-div-100vh@^0.5.0:
   version "0.5.0"
