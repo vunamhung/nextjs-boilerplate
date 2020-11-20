@@ -3,6 +3,7 @@ import Router from 'next/router';
 import { DefaultSeo } from 'next-seo';
 import * as gtag from '@/utilities/gtag';
 
+import '@/assets/styles/base.css';
 import '@/assets/styles/index.css';
 import '@/assets/styles/tailwind.css';
 import 'rc-drawer/assets/index.css';
