@@ -14,7 +14,7 @@
   }
 
   @each $priority in low, high {
-    .\~$(tone).\!$(priority) {
+    .\~$(tone).\%$(priority) {
       --color-content: var(--color-$(tone)-$(priority)-content);
       --color-fill: var(--color-$(tone)-$(priority)-fill);
       --color-background: var(--color-$(tone)-$(priority)-background, var(--color-fill));
@@ -26,7 +26,7 @@
 }
 
 @each $size in small, medium, large {
-  .\!$(size) {
+  .\%$(size) {
     --button-padding: var(--button-padding-$(size));
     --button-fontsize: var(--button-fontsize-$(size));
     --input-padding: var(--input-padding-$(size));

@@ -1,7 +1,7 @@
 :root {
   /* GRAY */
   --color-gray: var(--color-gray-600);
-  --color-gray-light: var(--color-gray-300);
+  --color-gray-light: var(--color-gray-400);
 
   --color-gray-low-title: var(--color-gray-900);
   --color-gray-low-content: var(--color-gray-700);
@@ -58,7 +58,7 @@
 
   /* WARNING */
   --color-warning: var(--color-warning-500);
-  --color-warning-light: var(--color-warning-500);
+  --color-warning-light: var(--color-warning-300);
 
   --color-warning-low-title: var(--color-warning-800);
   --color-warning-low-content: var(--color-warning-700);
@@ -112,23 +112,4 @@
   --color-info-high-content: #fff;
   --color-info-high-fill: var(--color-info-500);
   --color-info-high-muted: var(--color-info-100);
-
-  /* URGE */
-  --color-urge: var(--color-urge-600);
-  --color-urge-light: var(--color-urge-300);
-
-  --color-urge-low-title: var(--color-urge-700);
-  --color-urge-low-content: var(--color-urge-600);
-  --color-urge-low-fill: 'transparent';
-  --color-urge-low-background: #fff;
-  --color-urge-low-muted: var(--color-urge-500);
-
-  --color-urge-normal-content: var(--color-urge-800);
-  --color-urge-normal-fill: var(--color-urge-200);
-  --color-urge-normal-background: var(--color-urge-100);
-  --color-urge-normal-muted: var(--color-urge-600);
-
-  --color-urge-high-content: #fff;
-  --color-urge-high-fill: var(--color-urge-600);
-  --color-urge-high-muted: var(--color-urge-100);
 }

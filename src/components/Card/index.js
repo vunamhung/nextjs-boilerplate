@@ -6,7 +6,7 @@ export default function Card({ children, className, tone = 'primary', rounded = 
     <div
       className={classNames('card', className, {
         [`~${tone}`]: tone,
-        [`!${priority}`]: priority,
+        [`%${priority}`]: priority,
         [rounded]: rounded,
       })}
       {...props}

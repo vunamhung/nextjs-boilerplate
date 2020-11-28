@@ -6,7 +6,7 @@ export default function Badge({ children, className, tone = 'primary', priority,
     <span
       className={classNames('badge', className, {
         [`~${tone}`]: tone,
-        [`!${priority}`]: priority,
+        [`%${priority}`]: priority,
         'rounded-full px-4': pill,
         'rounded px-2': !pill,
       })}

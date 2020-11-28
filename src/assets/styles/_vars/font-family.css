@@ -1,6 +1,6 @@
 :root {
-  --family-primary: 'Roboto', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --family-primary: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --family-sans: var(--family-primary);
   --family-secondary: var(--family-primary);
+  --family-special: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }

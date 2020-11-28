@@ -8,8 +8,8 @@ export default function Button({ children, className, url, tone = 'primary', pri
     'inline-flex w-auto': !block,
     field: outline,
     [`~${tone}`]: tone,
-    [`!${priority}`]: priority && !outline,
-    [`!${size}`]: size,
+    [`%${priority}`]: priority && !outline,
+    [`%${size}`]: size,
   });
 
   if (url) {
