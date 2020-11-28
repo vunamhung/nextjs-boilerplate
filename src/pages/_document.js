@@ -1,11 +1,11 @@
-import Document, { Head, Main, NextScript } from 'next/document';
+import Document, { Head, Main, NextScript, Html } from 'next/document';
 import { GA_TRACKING_ID } from '@/utilities/gtag';
 import { APP_DESCRIPTION, APP_NAME } from '@/utilities/constants';
 
 export default class CustomDocument extends Document {
   render() {
     return (
-      <html lang='en'>
+      <Html lang='en'>
         <Head>
           <meta name='application-name' content={APP_NAME} />
           <meta name='apple-mobile-web-app-capable' content='yes' />
@@ -37,7 +37,7 @@ export default class CustomDocument extends Document {
           <Main />
           <NextScript />
         </body>
-      </html>
+      </Html>
     );
   }
 }
