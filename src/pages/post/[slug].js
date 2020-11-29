@@ -5,6 +5,19 @@ import Wrapper from '@/modules/Wrapper';
 import Container from '@/components/Container';
 import { getPostBySlug, getPostsSlugs } from '@/utilities/posts';
 
+export async function getStaticPaths() {
+  return {
+    paths: getPostsSlugs(),
+    fallback: false,
+  };
+}
+
+export async function getStaticProps({ params: { slug } }) {
+  const postData = getPostBySlug(slug);
+
+  return { props: postData };
+}
+
 export default function Post({ content, description, title, dateRelative, nextPost, previousPost }) {
   return (
     <Wrapper>
@@ -34,17 +47,4 @@ export default function Post({ content, description, title, dateRelative, nextPo
       </main>
     </Wrapper>
   );
-}
-
-export async function getStaticPaths() {
-  return {
-    paths: getPostsSlugs(),
-    fallback: false,
-  };
-}
-
-export async function getStaticProps({ params: { slug } }) {
-  const postData = getPostBySlug(slug);
-
-  return { props: postData };
 }

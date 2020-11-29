@@ -4,6 +4,14 @@ import Wrapper from '@/modules/Wrapper';
 import Container from '@/components/Container';
 import { getSortedPosts } from '@/utilities/posts';
 
+export async function getStaticProps() {
+  return {
+    props: {
+      posts: getSortedPosts(),
+    },
+  };
+}
+
 export default function Home({ posts }) {
   return (
     <Wrapper>
@@ -27,12 +35,4 @@ export default function Home({ posts }) {
       </Container>
     </Wrapper>
   );
-}
-
-export async function getStaticProps() {
-  return {
-    props: {
-      posts: getSortedPosts(),
-    },
-  };
 }
