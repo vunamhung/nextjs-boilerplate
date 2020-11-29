@@ -2,11 +2,28 @@ import Link from 'next/link';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-export default function Button({ children, className, url, tone = 'primary', priority = 'high', block, outline, size, onClick, ...props }) {
+export default function Button({
+  children,
+  className,
+  rounded,
+  url,
+  tone = 'primary',
+  priority = 'high',
+  block,
+  outline,
+  size,
+  onClick,
+  ...props
+}) {
   const classes = classNames('button', className, {
     'block w-full': block,
     'inline-flex w-auto': !block,
     field: outline,
+    rounded: rounded === true,
+    'rounded-full': rounded === 'full',
+    'rounded-lg': rounded === 'lg',
+    'bg-white text-black': tone === 'white',
+    'bg-black text-white': tone === 'black',
     [`~${tone}`]: tone,
     [`%${priority}`]: priority && !outline,
     [`%${size}`]: size,
