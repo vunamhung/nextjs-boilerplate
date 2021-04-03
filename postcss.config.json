@@ -3,14 +3,8 @@
     "postcss-easy-import": {},
     "postcss-import": {},
     "postcss-each": {},
-    "tailwindcss": {},
+    "@tailwindcss/jit": {},
     "postcss-nested": {},
-    "postcss-hexrgba": {},
-    "postcss-flexbugs-fixes": {},
-    "postcss-preset-env": {
-      "autoprefixer": {
-        "flexbox": "no-2009"
-      }
-    }
+    "autoprefixer": {}
   }
 }

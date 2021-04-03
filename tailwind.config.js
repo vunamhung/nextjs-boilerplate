@@ -1,5 +1,3 @@
-const plugin = require('tailwindcss/plugin');
-
 module.exports = {
   purge: {
     mode: 'layers',
@@ -13,6 +11,8 @@ module.exports = {
 
       black: '#000',
       white: '#fff',
+
+      light: 'var(--color-light)',
 
       gray: {
         50: 'var(--color-gray-50)',
@@ -99,10 +99,6 @@ module.exports = {
         900: 'var(--color-urge-900)',
       },
     },
-    aspectRatio: {
-      square: [1, 1],
-      '4/3': [4, 3],
-    },
     extend: {
       fontFamily: {
         primary: 'var(--family-primary)',
@@ -116,8 +112,22 @@ module.exports = {
           sm: '100%',
           md: '640px',
           lg: '960px',
-          xl: '1140px',
+          xl: '1360px',
         },
+      },
+      screens: {
+        dlg: { max: '1023px' },
+        dmd: { max: '767px' },
+      },
+      flex: {
+        2: '2 1 0%',
+        3: '3 1 0%',
+      },
+      backgroundColor: {
+        core: 'var(--color-core)',
+      },
+      borderColor: {
+        core: 'var(--color-core)',
       },
       boxShadow: {
         'outline-gray': 'var(--box-shadow-outline-gray)',
@@ -127,6 +137,7 @@ module.exports = {
         'outline-warning': 'var(--box-shadow-outline-warning)',
         'outline-info': 'var(--box-shadow-outline-info)',
         'outline-urge': 'var(--box-shadow-outline-urge)',
+        outline: '0 0 0 3px var(--color-light)',
       },
       maxWidth: {
         'min-content': 'min-content',
@@ -175,70 +186,20 @@ module.exports = {
     },
   },
   variants: {
-    aspectRatio: ['responsive', 'before'],
-  },
-  future: {
-    removeDeprecatedGapUtilities: true,
-  },
-  experimental: {
-    extendedSpacingScale: true,
-    extendedFontSizeScale: true,
+    extend: {
+      display: ['group-hover'],
+      backgroundColor: ['odd', 'before', 'after'],
+      borderRadius: ['before', 'after'],
+      inset: ['before', 'after'],
+      position: ['before', 'after'],
+      zIndex: ['before', 'after'],
+      backgroundOpacity: ['before', 'after'],
+    },
   },
   plugins: [
-    require('@tailwindcss/custom-forms'),
     require('@tailwindcss/typography'),
-    require('tailwindcss-aspect-ratio'),
-    plugin(({ addUtilities, addVariant, e, theme, prefix, variants }) => {
-      const escape = e || ((x) => x);
-
-      ['after', 'backdrop ', 'before', 'cue', 'first-letter', 'first-line', 'grammar-error ', 'marker ', 'placeholder ', 'selection'].forEach(
-        (pseudo) => {
-          addVariant(pseudo, ({ modifySelectors, separator }) => {
-            modifySelectors(({ className }) => {
-              return `.${escape(`${pseudo}${separator}${className}`)}::${pseudo}`;
-            });
-          });
-        },
-      );
-
-      addVariant('important', ({ container }) => {
-        container.walkRules((rule) => {
-          rule.selector = `.\\!${rule.selector.slice(1)}`;
-          rule.walkDecls((decl) => {
-            decl.important = true;
-          });
-        });
-      });
-
-      addUtilities(
-        {
-          '.empty-content': {
-            content: "''",
-          },
-        },
-        ['before'],
-      );
-
-      addUtilities(
-        {
-          '.col-span-full': {
-            'grid-column': '1 / -1',
-          },
-        },
-        ['responsive'],
-      );
-
-      addUtilities(
-        {
-          '.hide': {
-            display: 'none',
-          },
-          '.show': {
-            display: 'block',
-          },
-        },
-        ['responsive', 'important'],
-      );
-    }),
+    require('@tailwindcss/line-clamp'),
+    require('@tailwindcss/aspect-ratio'),
+    require('tailwindcss-pseudo-selectors'),
   ],
 };
