@@ -1,4 +1,5 @@
 module.exports = {
+  mode: 'jit',
   purge: {
     mode: 'layers',
     layers: ['utilities'],
