@@ -1,0 +1,3 @@
+.btn {
+  @apply bg-black px-2 py-1 text-white rounded text-xs;
+}

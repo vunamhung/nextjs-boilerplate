@@ -1,10 +1,7 @@
 {
   "plugins": {
-    "postcss-easy-import": {},
     "postcss-import": {},
-    "postcss-each": {},
     "tailwindcss": {},
-    "postcss-nested": {},
-    "autoprefixer": {}
+    "postcss-nested": {}
   }
 }

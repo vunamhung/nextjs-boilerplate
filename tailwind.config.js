@@ -1,144 +1,26 @@
+const { fontFamily, spacing } = require('tailwindcss/defaultTheme');
+
 module.exports = {
-  mode: 'jit',
-  purge: {
-    mode: 'layers',
-    layers: ['utilities'],
-    content: ['src/modules/**', 'src/components/**', 'src/pages/**'],
-  },
+  mode: process.env.NODE_ENV ? 'jit' : undefined, // This "hack" ensures your IDE detects all normal.
+  purge: ['./src/**/*.{html,js}'],
   theme: {
-    colors: {
-      transparent: 'transparent',
-      current: 'currentColor',
-
-      black: '#000',
-      white: '#fff',
-
-      light: 'var(--color-light)',
-
-      gray: {
-        50: 'var(--color-gray-50)',
-        100: 'var(--color-gray-100)',
-        200: 'var(--color-gray-200)',
-        300: 'var(--color-gray-300)',
-        400: 'var(--color-gray-400)',
-        500: 'var(--color-gray-500)',
-        600: 'var(--color-gray-600)',
-        700: 'var(--color-gray-700)',
-        800: 'var(--color-gray-800)',
-        900: 'var(--color-gray-900)',
-      },
-      primary: {
-        50: 'var(--color-primary-50)',
-        100: 'var(--color-primary-100)',
-        200: 'var(--color-primary-200)',
-        300: 'var(--color-primary-300)',
-        400: 'var(--color-primary-400)',
-        500: 'var(--color-primary-500)',
-        600: 'var(--color-primary-600)',
-        700: 'var(--color-primary-700)',
-        800: 'var(--color-primary-800)',
-        900: 'var(--color-primary-900)',
-      },
-      success: {
-        50: 'var(--color-success-50)',
-        100: 'var(--color-success-100)',
-        200: 'var(--color-success-200)',
-        300: 'var(--color-success-300)',
-        400: 'var(--color-success-400)',
-        500: 'var(--color-success-500)',
-        600: 'var(--color-success-600)',
-        700: 'var(--color-success-700)',
-        800: 'var(--color-success-800)',
-        900: 'var(--color-success-900)',
-      },
-      warning: {
-        50: 'var(--color-warning-50)',
-        100: 'var(--color-warning-100)',
-        200: 'var(--color-warning-200)',
-        300: 'var(--color-warning-300)',
-        400: 'var(--color-warning-400)',
-        500: 'var(--color-warning-500)',
-        600: 'var(--color-warning-600)',
-        700: 'var(--color-warning-700)',
-        800: 'var(--color-warning-800)',
-        900: 'var(--color-warning-900)',
-      },
-      danger: {
-        50: 'var(--color-danger-50)',
-        100: 'var(--color-danger-100)',
-        200: 'var(--color-danger-200)',
-        300: 'var(--color-danger-300)',
-        400: 'var(--color-danger-400)',
-        500: 'var(--color-danger-500)',
-        600: 'var(--color-danger-600)',
-        700: 'var(--color-danger-700)',
-        800: 'var(--color-danger-800)',
-        900: 'var(--color-danger-900)',
-      },
-      info: {
-        50: 'var(--color-info-50)',
-        100: 'var(--color-info-100)',
-        200: 'var(--color-info-200)',
-        300: 'var(--color-info-300)',
-        400: 'var(--color-info-400)',
-        500: 'var(--color-info-500)',
-        600: 'var(--color-info-600)',
-        700: 'var(--color-info-700)',
-        800: 'var(--color-info-800)',
-        900: 'var(--color-info-900)',
-      },
-      urge: {
-        50: 'var(--color-urge-50)',
-        100: 'var(--color-urge-100)',
-        200: 'var(--color-urge-200)',
-        300: 'var(--color-urge-300)',
-        400: 'var(--color-urge-400)',
-        500: 'var(--color-urge-500)',
-        600: 'var(--color-urge-600)',
-        700: 'var(--color-urge-700)',
-        800: 'var(--color-urge-800)',
-        900: 'var(--color-urge-900)',
-      },
+    fontFamily: {
+      sans: ['Muli', ...fontFamily.sans],
     },
     extend: {
-      fontFamily: {
-        primary: 'var(--family-primary)',
-        secondary: 'var(--family-secondary)',
-        sans: 'var(--family-sans)',
-      },
       container: {
         center: true,
-        padding: 'var(--spacing-4)',
+        padding: spacing[6],
         screens: {
           sm: '100%',
           md: '640px',
           lg: '960px',
-          xl: '1360px',
+          xl: '1000px',
         },
       },
       screens: {
         dlg: { max: '1023px' },
         dmd: { max: '767px' },
-      },
-      flex: {
-        2: '2 1 0%',
-        3: '3 1 0%',
-      },
-      backgroundColor: {
-        core: 'var(--color-core)',
-      },
-      borderColor: {
-        core: 'var(--color-core)',
-      },
-      boxShadow: {
-        'outline-gray': 'var(--box-shadow-outline-gray)',
-        'outline-primary': 'var(--box-shadow-outline-primary)',
-        'outline-success': 'var(--box-shadow-outline-success)',
-        'outline-danger': 'var(--box-shadow-outline-danger)',
-        'outline-warning': 'var(--box-shadow-outline-warning)',
-        'outline-info': 'var(--box-shadow-outline-info)',
-        'outline-urge': 'var(--box-shadow-outline-urge)',
-        outline: '0 0 0 3px var(--color-light)',
       },
       maxWidth: {
         'min-content': 'min-content',
@@ -175,10 +57,10 @@ module.exports = {
       minHeight: {
         'min-content': 'min-content',
         'max-content': 'max-content',
-        '1/4': '25%',
-        '1/2': '50%',
-        '3/4': '75%',
-        '4/5': '80%',
+        '1/4': '25vh',
+        '1/2': '50vh',
+        '3/4': '75vh',
+        '4/5': '80vh',
       },
       inset: {
         '1/2': '50%',
@@ -188,8 +70,7 @@ module.exports = {
   },
   variants: {
     extend: {
-      display: ['group-hover'],
-      backgroundColor: ['odd', 'before', 'after'],
+      backgroundColor: ['before', 'after'],
       borderRadius: ['before', 'after'],
       inset: ['before', 'after'],
       position: ['before', 'after'],
@@ -197,10 +78,5 @@ module.exports = {
       backgroundOpacity: ['before', 'after'],
     },
   },
-  plugins: [
-    require('@tailwindcss/typography'),
-    require('@tailwindcss/line-clamp'),
-    require('@tailwindcss/aspect-ratio'),
-    require('tailwindcss-pseudo-selectors'),
-  ],
+  plugins: [require('@tailwindcss/typography'), require('@tailwindcss/line-clamp'), require('@tailwindcss/aspect-ratio')],
 };

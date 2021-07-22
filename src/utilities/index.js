@@ -1,5 +1,3 @@
-import mobile from 'is-mobile';
-
 export function isArr(data) {
   return Object.prototype.toString.call(data) === '[object Array]';
 }
@@ -14,8 +12,4 @@ export function objCheck(data) {
   }
 
   return data;
-}
-
-export function isMobile() {
-  return mobile({ featureDetect: true, tablet: true });
 }
