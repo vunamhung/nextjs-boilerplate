@@ -12,6 +12,7 @@
     "debug": "NODE_OPTIONS='--inspect' next dev"
   },
   "dependencies": {
+    "@babel/runtime": "^7.14.8",
     "axios": "0.21.1",
     "next": "11.0.1",
     "next-compose-plugins": "^2.1.1",
@@ -68,16 +69,6 @@
     "tailwindcss": "2.2.6",
     "terser-webpack-plugin": "^5.1.1",
     "webp-loader": "^0.6.0"
-  },
-  "bit": {
-    "env": {},
-    "componentsDefaultDirectory": "src/components/{name}",
-    "packageManager": "yarn",
-    "resolveModules": {
-      "aliases": {
-        "@": "src"
-      }
-    }
   },
   "husky": {
     "hooks": {
