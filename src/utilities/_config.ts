@@ -1,2 +1,2 @@
-export const APP_NAME = 'NextJS Boilerplate';
-export const APP_DESCRIPTION = 'NextJS Boilerplate';
+export const appName = 'NextJS Boilerplate';
+export const appDescription = 'NextJS Boilerplate';

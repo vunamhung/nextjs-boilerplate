@@ -10,7 +10,7 @@
     "export": "next export",
     "clean": "rimraf .next out",
     "build-prod": "run-s clean build export",
-    "svgr": "svgr src/assets/svg/ -d src/icons/ --icon",
+    "svgr": "svgr app/assets/svg/ -d app/icons/ --ext tsx --icon",
     "debug": "NODE_OPTIONS='--inspect' next dev"
   },
   "dependencies": {
@@ -24,7 +24,6 @@
     "next-pwa": "^5.5.4",
     "next-seo": "^5.4.0",
     "nprogress": "^0.2.0",
-    "preact": "^10.5.14",
     "ramda": "^0.28.0",
     "ramda-adjunct": "^3.2.0",
     "react": "^18.2.0",
