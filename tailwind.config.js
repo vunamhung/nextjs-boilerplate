@@ -1,13 +1,33 @@
 const { fontFamily, spacing } = require('tailwindcss/defaultTheme');
+const plugin = require('tailwindcss/plugin');
+const colors = require('tailwindcss/colors');
 
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   mode: 'jit',
-  purge: ['./src/**/*.{html,js}'],
+  content: ['./src/**/*.{html,tsx}'],
   theme: {
     fontFamily: {
-      sans: ['Muli', ...fontFamily.sans],
+      sans: ['Jost', 'Helvetica Neue', ...fontFamily.sans],
+      body: fontFamily.sans,
+    },
+    gridAutoFit: {
+      1: spacing[1],
+      7: spacing[7],
+    },
+    gridAutoFill: {
+      1: spacing[1],
+      7: spacing[7],
     },
     extend: {
+      colors: {
+        neutral: colors.slate,
+        positive: colors.green,
+        urge: colors.violet,
+        warning: colors.yellow,
+        info: colors.blue,
+        critical: colors.red,
+      },
       container: {
         center: true,
         padding: spacing[6],
@@ -15,7 +35,7 @@ module.exports = {
           sm: '100%',
           md: '640px',
           lg: '960px',
-          xl: '1000px',
+          xl: '1220px',
         },
       },
       screens: {
@@ -68,15 +88,19 @@ module.exports = {
       },
     },
   },
-  variants: {
-    extend: {
-      backgroundColor: ['before', 'after'],
-      borderRadius: ['before', 'after'],
-      inset: ['before', 'after'],
-      position: ['before', 'after'],
-      zIndex: ['before', 'after'],
-      backgroundOpacity: ['before', 'after'],
-    },
-  },
-  plugins: [require('@tailwindcss/typography'), require('@tailwindcss/line-clamp'), require('@tailwindcss/aspect-ratio')],
+  plugins: [
+    plugin(({ matchUtilities, theme, addVariant }) => {
+      addVariant('child', '&>*');
+      matchUtilities(
+        { 'grid-auto-fit': (value) => ({ gridTemplateColumns: `repeat(auto-fit, minmax(${value}, 1fr))` }) },
+        { values: theme('gridAutoFit') },
+      );
+      matchUtilities(
+        { 'grid-auto-fill': (value) => ({ gridTemplateColumns: `repeat(auto-fill, minmax(${value}, 1fr))` }) },
+        { values: theme('gridAutoFill') },
+      );
+    }),
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/line-clamp'),
+  ],
 };

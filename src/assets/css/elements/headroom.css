@@ -1,0 +1,14 @@
+.headroom {
+  transition: transform 0.25s ease-in-out;
+  will-change: transform;
+  @apply relative left-0 right-0 top-0 z-20;
+}
+
+.headroom--pinned.headroom--not-top {
+  transform: translateY(0);
+  @apply fixed;
+}
+
+.headroom--unpinned {
+  transform: translateY(-100%);
+}

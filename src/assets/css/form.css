@@ -1,6 +1,0 @@
-a {
-  @apply hover:text-green-500 transition-all;
-}
-.field {
-  @apply border-b border-dashed border-gray-200 focus-within:outline-none focus:border-solid focus:border-green-500;
-}

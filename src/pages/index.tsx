@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <>
       <NextSeo title='Home' description='A short description goes here.' />
-      <div className='container'>next</div>
+      <div className='container text-xl'>next</div>
     </>
   );
 }

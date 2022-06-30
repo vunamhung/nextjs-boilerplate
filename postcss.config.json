@@ -1,7 +1,8 @@
 {
   "plugins": {
+    "postcss-import-ext-glob": {},
     "postcss-import": {},
-    "tailwindcss": {},
-    "postcss-nested": {}
+    "tailwindcss/nesting": {},
+    "tailwindcss": {}
   }
 }

@@ -1,6 +1,0 @@
-html {
-  @apply antialiased;
-}
-.grid > * {
-  @apply min-w-full;
-}

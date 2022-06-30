@@ -1,7 +1,5 @@
-@import 'tailwindcss/base';
-@import 'base.css';
-@import 'typo.css';
-@import 'form.css';
-@import 'button.css';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import 'tailwindcss/base.css';
+@import-glob 'elements/*.css';
+@import-glob 'components/*.css';
+@import 'tailwindcss/components.css';
+@import 'tailwindcss/utilities.css';

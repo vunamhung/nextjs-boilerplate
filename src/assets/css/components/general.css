@@ -1,0 +1,8 @@
+.pin {
+  .sticky.top-0 {
+    @apply !top-[72px];
+  }
+}
+.filepond--credits {
+  @apply hidden;
+}
