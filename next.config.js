@@ -2,4 +2,4 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 });
 
-module.exports = withBundleAnalyzer({ experimental: { appDir: true } });
+module.exports = withBundleAnalyzer({ experimental: { appDir: false } });
