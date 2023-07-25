@@ -1,5 +1,5 @@
-import Document, { Head, Main, NextScript, Html } from 'next/document';
 import { appDescription, appName } from '@/utilities';
+import Document, { Head, Html, Main, NextScript } from 'next/document';
 
 export default class CustomDocument extends Document {
   render() {

@@ -1,8 +1,8 @@
+import { convertType } from '@/utilities';
 import Cookie from 'js-cookie';
+import emitter from 'tiny-emitter/instance';
 import { proxy } from 'valtio';
 import { devtools } from 'valtio/utils';
-import emitter from 'tiny-emitter/instance';
-import { convertType } from '@/utilities';
 
 export const store = proxy({
   site: convertType(Cookie.get('site') || '') ? Cookie.get('site') : 'Seseable.com',
