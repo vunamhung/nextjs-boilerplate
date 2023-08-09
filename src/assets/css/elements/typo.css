@@ -1,15 +1,39 @@
+@layer utilities {
+  .h1 {
+    @apply text-4xl;
+  }
+  .h2 {
+    @apply text-3xl;
+  }
+  .h3 {
+    @apply text-2xl;
+  }
+  .h4 {
+    @apply text-xl;
+  }
+  .h5 {
+    @apply text-base;
+  }
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .h5 {
+    @apply font-semibold text-black;
+  }
+}
 h1 {
-  @apply text-4xl;
+  @apply h1;
 }
 h2 {
-  @apply text-3xl;
+  @apply h2;
 }
 h3 {
-  @apply text-2xl;
+  @apply h3;
 }
 h4 {
-  @apply text-xl;
+  @apply h4;
 }
 h5 {
-  @apply text-base;
+  @apply h5;
 }
