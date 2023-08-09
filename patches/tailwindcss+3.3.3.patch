@@ -1,0 +1,26 @@
+diff --git a/node_modules/tailwindcss/lib/css/preflight.css b/node_modules/tailwindcss/lib/css/preflight.css
+index fab875d..25f721a 100644
+--- a/node_modules/tailwindcss/lib/css/preflight.css
++++ b/node_modules/tailwindcss/lib/css/preflight.css
+@@ -190,7 +190,7 @@ button,
+ [type='reset'],
+ [type='submit'] {
+   -webkit-appearance: button; /* 1 */
+-  background-color: transparent; /* 2 */
++  /*background-color: transparent; !* 2 *!*/
+   background-image: none; /* 2 */
+ }
+ 
+diff --git a/node_modules/tailwindcss/src/css/preflight.css b/node_modules/tailwindcss/src/css/preflight.css
+index fab875d..25f721a 100644
+--- a/node_modules/tailwindcss/src/css/preflight.css
++++ b/node_modules/tailwindcss/src/css/preflight.css
+@@ -190,7 +190,7 @@ button,
+ [type='reset'],
+ [type='submit'] {
+   -webkit-appearance: button; /* 1 */
+-  background-color: transparent; /* 2 */
++  /*background-color: transparent; !* 2 *!*/
+   background-image: none; /* 2 */
+ }
+ 

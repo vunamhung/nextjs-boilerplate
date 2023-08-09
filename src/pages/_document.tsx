@@ -1,23 +1,32 @@
-import { appDescription, appName } from '@/utilities';
-import Document, { Head, Html, Main, NextScript } from 'next/document';
+import Document, { DocumentContext, Head, Html, Main, NextScript } from 'next/document';
+import { config } from '@/utilities';
+import { createStylesServer, ServerStyles } from '@mantine/next';
+
+const stylesServer = createStylesServer();
 
 export default class CustomDocument extends Document {
+  static async getInitialProps(ctx: DocumentContext) {
+    const initialProps = await Document.getInitialProps(ctx);
+    return {
+      ...initialProps,
+      styles: [initialProps.styles, <ServerStyles html={initialProps.html} server={stylesServer} key="styles" />],
+    };
+  }
+
   render() {
     return (
       <Html lang="en">
         <Head>
-          <meta name="application-name" content={appName} />
+          <meta name="application-name" content={config.app.name} />
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-          <meta name="apple-mobile-web-app-title" content={appName} />
-          <meta name="description" content={appDescription} />
+          <meta name="apple-mobile-web-app-title" content={config.app.name} />
           <meta name="format-detection" content="telephone=no" />
           <meta name="mobile-web-app-capable" content="yes" />
           <meta name="theme-color" content="#FFFFFF" />
           <link rel="icon" href="/icons/favicon.ico" />
           <link rel="apple-touch-icon" href="/icons/apple.png" />
           <link rel="manifest" href="/manifest.json" />
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" />
         </Head>
         <body>
           <Main />
