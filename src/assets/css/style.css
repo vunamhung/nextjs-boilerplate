@@ -1,5 +1,7 @@
 @import 'tailwindcss/base.css';
-@import-glob 'elements/*.css';
-@import-glob 'components/*.css';
+@import 'elements/base.css';
+@import 'elements/skeleton.css';
+@import 'elements/typo.css';
+@import 'components/general.css';
 @import 'tailwindcss/components.css';
 @import 'tailwindcss/utilities.css';

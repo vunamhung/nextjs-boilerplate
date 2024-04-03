@@ -1,13 +1,17 @@
-const { fontFamily, spacing } = require('tailwindcss/defaultTheme');
-const plugin = require('tailwindcss/plugin');
-const colors = require('tailwindcss/colors');
+import type { Config } from "tailwindcss";
+import { fontFamily, spacing } from 'tailwindcss/defaultTheme';
+import plugin from 'tailwindcss/plugin';
+import colors from 'tailwindcss/colors';
 
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ['./src/**/*.{html,tsx}'],
+const config: Config = {
+  content: [
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
   theme: {
     fontFamily: {
-      sans: ['Jost', 'Helvetica Neue', ...fontFamily.sans],
+      sans: ['Inter', 'Helvetica Neue', ...fontFamily.sans],
       body: fontFamily.sans,
     },
     gridAutoFit: {
@@ -100,5 +104,6 @@ module.exports = {
       );
     }),
     require('@tailwindcss/typography'),
-  ],
+  ]
 };
+export default config;
